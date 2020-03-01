@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/registrarAluno.css">
+    <link rel="stylesheet" href="css/utilidades.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--Ref. botões true and false-->
+
+    <title>Registro Aluno</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="form-group col-md-9">
+                <label for="exampleFormControlInput1">Pesquisa</label>
+                <input type="text" class="form-control form-control-md" id="exampleFormControlInput1"
+                    placeholder="Descrição">
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="exampleFormControlSelect1">Tipo de pesquisa</label>
+                <select class="form-control form-control-md" id="exampleFormControlSelect1">
+                    <option selected>Por nome</option>
+                    <option>Por escola</option>
+                    <option>Por turma</option>
+                    <option>Por série</option>
+                    <option>Por turno</option>
+                    <option>Por ID</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table table-sm table-striped table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Situação</th>
+                            <th scope="col">Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark Silva Santos</td>
+                            <td>Ativo</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg" onclick="
+                                    $('#btn-excluir').hide();
+                                    $('#btn-editar').show(); 
+                                    $('#form-principal .hide-show').each(function(){
+                                        $(this).prop('disabled', true);
+                                    });
+
+                                    $('#nomeAluno').val('Aluno protótipo');
+                                    $('#idEscola').val('1');
+                                    $('#idSerie').val('1');
+                                    $('#idTurma').val('1');
+                                    $('#idTurno').val('1');
+                                    $('#idStatus').val('1');
+
+                                    ">Ver</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
+                    onclick="
+                $('#btn-editar, #btn-excluir').hide();
+                $('#form-principal .hide-show').each(function(){
+                    $(this).prop('disabled', false);
+                });
+                $('form')[0].reset();
+                ">Novo aluno</button>
+            </div>
+        </div>
+
+
+
+        <!-- MODAL CRUD -->
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Registro de Aluno</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="container-fluid">
+                            <form id="form-principal">
+                                <div class="form-row">
+                                    <div class="form-group col-xs-12 col-lg-6">
+                                        <label for="exampleFormControlInput1 ">Nome do aluno</label>
+                                        <input type="text" class="form-control form-control-lg hide-show" id="nomeAluno"
+                                            placeholder="Nome">
+                                    </div>
+
+                                    <div class="form-group col-xs-12 col-lg-6">
+                                        <label for="exampleFormControlSelect1">Escola</label>
+                                        <select class="form-control form-control-lg hide-show" id="idEscola">
+                                            <option selected disabled>Selecione uma escola</option>
+                                            <option value="1">Escola Municipal 1</option>
+                                            <option>Escola Municipal 2</option>
+                                            <option>Escola Municipal 3</option>
+                                            <option>Escola Municipal 4</option>
+                                            <option>Escola Municipal 5</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-xs-12 col-lg-6">
+                                        <label for="exampleFormControlSelect1">Série</label>
+                                        <select class="form-control form-control-lg hide-show" id="idSerie">
+                                            <option selected disabled>Selecione uma série</option>
+                                            <option value="1">1º Série</option>
+                                            <option>2º Série</option>
+                                            <option>3º Série</option>
+                                            <option>4º Série</option>
+                                            <option>5º Série</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group col-xs-12 col-lg-6">
+                                        <label for="exampleFormControlSelect1">Turma</label>
+                                        <select class="form-control form-control-lg hide-show" id="idTurma">
+                                            <option selected disabled>Selecione uma turma</option>
+                                            <option value="1">Turma - A</option>
+                                            <option>Turma - B</option>
+                                            <option>Turma - C</option>
+                                            <option>Turma - D</option>
+                                            <option>Turma - E</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group col-xs-12 col-lg-6">
+                                        <label for="exampleFormControlSelect1">Turno</label>
+                                        <select class="form-control form-control-lg hide-show" id="idTurno">
+                                            <option selected disabled>Selecione um turno</option>
+                                            <option value="1">Vespertino</option>
+                                            <option>Matutino</option>
+                                            <option>Nortuno</option>
+                                            <option>Integral</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group col-xs-12 col-lg-6">
+                                        <label for="exampleFormControlSelect1">Status</label>
+                                        <select class="form-control form-control-lg hide-show" id="idStatus">
+                                            <option selected disabled>Selecione o status</option>
+                                            <option value="1">Ativo</option>
+                                            <option>Transferido</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-lg btn-primary mb-2"
+                                            onclick="alert('Aluno salvo com sucesso!')">Salvar</button>
+
+                                        <button id="btn-editar" type="button" class="btn btn-lg btn-primary mb-2"
+                                            onclick="
+                                        $('#form-principal .hide-show').each(function(){
+                                            $(this).prop('disabled', false);
+                                        });
+                                        $('#btn-excluir').show();
+                                        ">Editar</button>
+                                        <button id="btn-excluir" type="button"
+                                            class="btn btn-lg btn-primary mb-2">Excluir</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+</html>

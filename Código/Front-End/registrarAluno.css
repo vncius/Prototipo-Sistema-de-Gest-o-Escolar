@@ -1,0 +1,20 @@
+.slow .toggle-group {
+    transition: left 0.7s; -webkit-transition: left 0.7s;
+}
+
+
+table thead tr th:nth-last-child(-n+2), table tbody tr td:nth-last-child(-n+2) {
+    width: auto;
+    text-align: center;
+}
+
+table thead tr th:first-child, table tbody tr th:first-child {
+    margin: auto;
+    text-align: center;
+    width: 40px;
+}
+
+table {
+    background-color: white!important;
+    table-layout:fixed;
+}
