@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="css/utilidades.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Menu principal</title>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <h2 class="sigla">SGE</h2>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <!--<li class="nav-item active">-->
+                    <a class="nav-link" href="#" onclick="$('#container').load('registrarFrequencia.html');">Registrar
+                        Frequência
+                        <!--<span class="sr-only">(current)</span>--></a>
+                </li>
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="#">Registrar Notas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Registrar Progressão</a>
+                </li> -->
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Cadastros
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#" onclick="$('#container').load('registrarAluno.html');">Alunos</a>
+                        <a class="dropdown-item" href="#" onclick="$('#container').load('registrarEscolas.html');">Escolas</a>
+                        <a class="dropdown-item" href="#" onclick="$('#container').load('registrarProfessores.html');">Professores</a>
+                        <!-- <a class="dropdown-item" href="#">Diário</a> -->
+                    </div>
+                </li>
+
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Configurações
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Configurar Tipos de ensinos</a>
+                        <a class="dropdown-item" href="#">Configurar Turmas</a>
+                        <a class="dropdown-item" href="#">Configurar Turnos</a>
+                        <a class="dropdown-item" href="#">Configurar Séries</a>
+                    </div>
+                </li> -->
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <div id="container" class="container">
+        
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+</html>
