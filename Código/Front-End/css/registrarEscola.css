@@ -3,12 +3,12 @@ html, body, .container {
     height: 100%;
 }
 
-th, td {
+th, td, tr {
     vertical-align: middle!important;
 }
 
-table thead tr th:last-child, table tbody tr td:last-child {
-    width: 150px;
+table thead tr th:nth-last-child(-n+2), table tbody tr td:nth-last-child(-n+2) {
+    width: auto;
     text-align: center;
 }
 

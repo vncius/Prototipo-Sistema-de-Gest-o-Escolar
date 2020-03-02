@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/registrarEscola.css">
-    <title>Registro Escolas</title>
+    <link rel="stylesheet" href="css/registrarTurmas.css">
+
+    <title>Registro de Tipos de Ensinos</title>
 </head>
 
 <body>
@@ -17,8 +18,7 @@
             <div class="form-group col-md-3">
                 <label for="exampleFormControlSelect1">Tipo de pesquisa</label>
                 <select class="form-control form-control-md" id="exampleFormControlSelect1">
-                    <option selected>Por nome</option>
-                    <option>Por CNPJ</option>
+                    <option selected>Por descrição</option>
                 </select>
             </div>
         </div>
@@ -29,16 +29,14 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">ID</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">CNPJ</th>
+                            <th scope="col">Descrição</th>
                             <th scope="col">Opções</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Escola Municipal 1</td>
-                            <td>50.061.655/0001-48</td>
+                            <td>Turma - A</td>
                             <td>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
                                     $('#btn-excluir').hide();
@@ -47,9 +45,71 @@
                                         $(this).prop('disabled', true);
                                     });
 
-                                    $('#enderecoEscola').val('Rua 1, QD.32, LT.44, Cocalinho-MT');
-                                    $('#nomeEscola').val('Escola Municipal 1');
-                                    $('#cnpj').val('50.061.655/0001-48');
+                                    $('#descricao').val('Turma - A');
+
+                                    ">Ver</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Turma - B</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
+                                    $('#btn-excluir').hide();
+                                    $('#btn-editar').show(); 
+                                    $('#form-principal .hide-show').each(function(){
+                                        $(this).prop('disabled', true);
+                                    });
+
+                                    $('#descricao').val('Turma - B');
+
+                                    ">Ver</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Turma - C</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
+                                    $('#btn-excluir').hide();
+                                    $('#btn-editar').show(); 
+                                    $('#form-principal .hide-show').each(function(){
+                                        $(this).prop('disabled', true);
+                                    });
+
+                                    $('#descricao').val('Turma - C');
+
+                                    ">Ver</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Turma - D</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
+                                    $('#btn-excluir').hide();
+                                    $('#btn-editar').show(); 
+                                    $('#form-principal .hide-show').each(function(){
+                                        $(this).prop('disabled', true);
+                                    });
+
+                                    $('#descricao').val('Turma - D');
+
+                                    ">Ver</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Turma - E</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
+                                    $('#btn-excluir').hide();
+                                    $('#btn-editar').show(); 
+                                    $('#form-principal .hide-show').each(function(){
+                                        $(this).prop('disabled', true);
+                                    });
+
+                                    $('#descricao').val('Turma - E');
 
                                     ">Ver</button>
                             </td>
@@ -88,22 +148,12 @@
                         <div class="container-fluid">
                             <form id="form-principal">
                                 <div class="form-row">
-                                    <div class="form-group col-xs-12 col-lg-6">
-                                        <label for="nomeEscola">Nome da escola</label>
-                                        <input type="text" class="form-control form-control-lg hide-show" id="nomeEscola" placeholder="Nome">
-                                    </div>
-
-                                    <div class="form-group col-xs-12 col-lg-6">
-                                        <label for="cnpj">CNPJ</label>
-                                        <input type="text" class="form-control form-control-lg hide-show" id="cnpj" placeholder="CNPJ">
-                                    </div>
-
-                                    <div class="form-group col-xs-12 col-lg-12">
-                                        <label for="enderecoEscola">Endereço da Escola</label>
-                                        <input type="text" class="form-control form-control-lg hide-show" id="enderecoEscola" placeholder="Endereço da Escola">
-                                    </div>
+                                    <div class="form-group col">
+                                        <label for="descricao">Descrição Turma</label>
+                                        <input type="text" class="form-control form-control-lg hide-show" id="descricao" placeholder="Descrição da Turma">
+                                    </div>                                 
                                 </div>
-
+                    
                                 <div class="form-row">
                                     <div class="col">
                                         <button type="button" class="btn btn-lg btn-primary mb-2"

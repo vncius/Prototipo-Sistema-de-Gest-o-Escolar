@@ -8,6 +8,10 @@ table thead tr th:nth-last-child(-n+2), table tbody tr td:nth-last-child(-n+2) {
     text-align: center;
 }
 
+th, td, tr {
+    vertical-align: middle!important;
+}
+
 table thead tr th:first-child, table tbody tr th:first-child {
     margin: auto;
     text-align: center;
