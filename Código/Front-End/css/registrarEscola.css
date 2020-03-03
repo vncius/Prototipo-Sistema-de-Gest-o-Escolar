@@ -3,12 +3,8 @@ html, body, .container {
     height: 100%;
 }
 
-th, td, tr {
-    vertical-align: middle!important;
-}
-
-table thead tr th:nth-last-child(-n+2), table tbody tr td:nth-last-child(-n+2) {
-    width: auto;
+table thead tr th:last-child, table tbody tr td:last-child {
+    width: 120px;
     text-align: center;
 }
 
@@ -27,16 +23,9 @@ table thead tr th:first-child, table tbody tr th:first-child {
     table-layout: fixed;
 }
 
-/* @media only screen and (max-width: 600px) {
-    td, th {
-        padding-left: 0px;
-        padding-right: 5px;
+@media only screen and (max-width: 600px) {
+    table thead tr th:last-child, table tbody tr td:last-child {
+        width: 70px!important;
+        text-align: center;
     }
 }
-
-@media only screen and (min-width: 601px) {
-    td, th {
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-} */

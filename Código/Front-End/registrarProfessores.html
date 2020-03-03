@@ -2,25 +2,33 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/registraFrequencia.css">
+    <link rel="stylesheet" href="css/registrarProfessores.css">
 
     <title>Registro Professores</title>
 </head>
 
 <body>
     <div class="container-fluid">
+        <div class="row align-items-center">
+            <h3 class="col">Registro de Professores</h3>
+        </div>
         <div class="row">
-            <div class="form-group col-md-9">
+            <div class="form-group col-md-6">
                 <label for="exampleFormControlInput1">Pesquisa</label>
                 <input type="text" class="form-control form-control-md" id="exampleFormControlInput1" placeholder="Descrição">
             </div>
 
-            <div class="form-group col-md-3">
+            <div class="form-group col-md-4">
                 <label for="exampleFormControlSelect1">Tipo de pesquisa</label>
                 <select class="form-control form-control-md" id="exampleFormControlSelect1">
                     <option selected>Por nome</option>
                     <option>Por CNPJ</option>
                 </select>
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="teste" style="opacity: 0%;" class="hide-show-responsive">teste</label>
+                <button type="button" id="teste" class="btn btn-primary form-control form-control-md">Buscar</button>
             </div>
         </div>
 
@@ -31,7 +39,7 @@
                         <tr>
                             <th scope="col">ID</th>
                             <th scope="col">Nome</th>
-                            <th scope="col">CPF</th>
+                            <th scope="col" class="hide-show-responsive">CPF</th>
                             <th scope="col">Opções</th>
                         </tr>
                     </thead>
@@ -39,7 +47,7 @@
                         <tr>
                             <th scope="row">1</th>
                             <td>Rodolfo Pereira do Santos</td>
-                            <td>856.966.555-99</td>
+                            <td class="hide-show-responsive">856.966.555-99</td>
                             <td>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
                                     $('#btn-excluir').hide();

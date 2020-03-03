@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/registrarTiposDeEnsinos.css">
+    <link rel="stylesheet" href="css/registrarTurnos.css">
 
-    <title>Registro de Tipos de Ensinos</title>
+    <title>Registro de Turno</title>
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="row align-items-center">
-            <h3 class="col">Registro de Ensinos</h3>
+            <h3 class="col">Registro de Turnos</h3>
         </div>
         <div class="row">
             <div class="form-group col-md-6">
@@ -24,7 +24,7 @@
                     <option selected>Por descrição</option>
                 </select>
             </div>
-            
+
             <div class="form-group col-md-2">
                 <label for="teste" style="opacity: 0%;" class="hide-show-responsive">teste</label>
                 <button type="button" id="teste" class="btn btn-primary form-control form-control-md">Buscar</button>
@@ -44,7 +44,7 @@
                     <tbody>
                         <tr>
                             <th scope="row">1</th>
-                            <td>Ensino Fundamental</td>
+                            <td>Vespertino</td>
                             <td>
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
                                     $('#btn-excluir').hide();
@@ -53,7 +53,39 @@
                                         $(this).prop('disabled', true);
                                     });
 
-                                    $('#descricao').val('Ensino Fundamental');
+                                    $('#descricao').val('Vespertino');
+
+                                    ">Ver</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Matutino</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
+                                    $('#btn-excluir').hide();
+                                    $('#btn-editar').show(); 
+                                    $('#form-principal .hide-show').each(function(){
+                                        $(this).prop('disabled', true);
+                                    });
+
+                                    $('#descricao').val('Matutino');
+
+                                    ">Ver</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Noturno</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
+                                    $('#btn-excluir').hide();
+                                    $('#btn-editar').show(); 
+                                    $('#form-principal .hide-show').each(function(){
+                                        $(this).prop('disabled', true);
+                                    });
+
+                                    $('#descricao').val('Noturno');
 
                                     ">Ver</button>
                             </td>
@@ -71,7 +103,7 @@
                     $(this).prop('disabled', false);
                 });
                 $('form')[0].reset();
-                ">Nova Escola</button>
+                ">Novo Turno</button>
             </div>
         </div>
 
@@ -93,8 +125,8 @@
                             <form id="form-principal">
                                 <div class="form-row">
                                     <div class="form-group col">
-                                        <label for="descricao">Descrição</label>
-                                        <input type="text" class="form-control form-control-lg hide-show" id="descricao" placeholder="Descrição do tipo de ensino">
+                                        <label for="descricao">Descrição Turno</label>
+                                        <input type="text" class="form-control form-control-lg hide-show" id="descricao" placeholder="Descrição do Turno">
                                     </div>                                 
                                 </div>
                     
