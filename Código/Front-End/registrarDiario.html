@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/registrarDiario.css">
+
+    <title>Registro de Diário</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <h3 class="col">Registro de Diários</h3>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="exampleFormControlInput1">Pesquisa</label>
+                <input type="text" class="form-control form-control-md" id="exampleFormControlInput1"
+                    placeholder="Descrição">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="exampleFormControlSelect1">Tipo de pesquisa</label>
+                <select class="form-control form-control-md" id="exampleFormControlSelect1">
+                    <!-- <option selected>Por descrição</option> -->
+                </select>
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="teste" style="opacity: 0%;" class="hide-show-responsive">teste</label>
+                <button type="button" id="teste" class="btn btn-primary form-control form-control-md">Buscar</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table table-sm table-striped table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Professor(a)</th>
+                            <th scope="col" class="hide-show-responsive">Ano letivo</th>
+                            <th scope="col" class="hide-show-responsive">Turma</th>
+                            <th scope="col" class="hide-show-responsive">Turno</th>
+                            <th scope="col">Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Rodolfo Pereira do Santos</td>
+                            <td class="hide-show-responsive">2020</td>
+                            <td class="hide-show-responsive">Turma - A</td>
+                            <td class="hide-show-responsive">Vespertino</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg" onclick="
+                                    $('#btn-excluir').hide();
+                                    $('#btn-editar').show(); 
+                                    $('#form-principal .hide-show').each(function(){
+                                        $(this).prop('disabled', true);
+                                    });
+
+                                    $('#tipoEnsino').val('Ensino Fundamental');
+                                    $('#descricaoTurno').val('Vespertino');
+                                    $('#anoLetivo').val('2020');
+                                    $('#nomeProfessor').val('Rodolfo Pereira do Santos');
+                                    $('#idTurma').val('1');
+
+                                    ">Ver</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
+                    onclick="
+                $('#btn-editar, #btn-excluir').hide();
+                $('#form-principal .hide-show').each(function(){
+                    $(this).prop('disabled', false);
+                });
+
+                $('#idTurma').prop('disabled', true);
+
+                $('form')[0].reset();
+                ">Novo Turno</button>
+            </div>
+        </div>
+
+
+
+        <!-- MODAL CRUD -->
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Registro de Diário</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="container-fluid">
+                            <form id="form-principal">
+                                <div class="form-row">
+                                    <div class="form-group col-xs-12 col-lg-6">
+                                        <label for="idEscola">Escola</label>
+                                        <select class="form-control form-control-lg hide-show" id="idEscola">
+                                            <option selected disabled>Selecione uma escola</option>
+                                            <option value="1">Escola Municipal 1</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-xs-12 col-lg-6">
+                                        <label for="idTurma">Turma</label>
+                                        <select class="form-control form-control-lg hide-show" id="idTurma">
+                                            <option selected disabled>Selecione uma escola</option>
+                                            <option value="1">Turma - A</option>
+                                            <option value="2">Turma - B</option>
+                                            <option value="3">Turma - C</option>
+                                            <option value="4">Turma - D</option>
+                                            <option value="5">Turma - E</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <label for="nomeProfessor">Professor</label>
+                                        <input readonly type="text" class="form-control form-control-lg hide-show"
+                                            id="nomeProfessor" placeholder="Professor">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <label for="tipoEnsino">Tipo de Ensino</label>
+                                        <input readonly type="text" class="form-control form-control-lg hide-show"
+                                            id="tipoEnsino" placeholder="Tipo de ensino">
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-6">
+                                        <label for="descricaoTurno">Turno</label>
+                                        <input readonly type="text" class="form-control form-control-lg hide-show"
+                                            id="descricaoTurno" placeholder="Turno">
+                                    </div>
+                                    <div class="form-group col-6">
+                                        <label for="anoLetivo">Ano Letivo</label>
+                                        <input readonly type="text" class="form-control form-control-lg hide-show"
+                                            id="anoLetivo" placeholder="Ano Letivo">
+                                    </div>
+                                </div>
+
+
+                                <div class="form-row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-lg btn-primary mb-2"
+                                            onclick="alert('Registro salvo com sucesso!')">Salvar</button>
+
+                                        <button id="btn-editar" type="button" class="btn btn-lg btn-primary mb-2"
+                                            onclick="
+                                        $('#form-principal .hide-show').each(function(){
+                                            $(this).prop('disabled', false);
+                                        });
+                                        $('#btn-excluir').show();
+                                        ">Editar</button>
+                                        <button id="btn-excluir" type="button"
+                                            class="btn btn-lg btn-primary mb-2">Excluir</button>
+                                    </div>
+                                </div>
+                            </form>
+                            <script>
+
+                                $("#idTurma").change(function () {
+                                    var idSelecionado = $('#idTurma').val();
+                                    switch (idSelecionado) {
+                                        case '1':
+                                            $('#tipoEnsino').val('Ensino Fundamental');
+                                            $('#descricaoTurno').val('Vespertino');
+                                            $('#anoLetivo').val('2020');
+                                            $('#nomeProfessor').val('Rodolfo Pereira do Santos');
+                                            break;
+                                        case '2':
+                                            $('#tipoEnsino').val('Ensino Fundamental');
+                                            $('#descricaoTurno').val('Vespertino');
+                                            $('#anoLetivo').val('2020');
+                                            $('#nomeProfessor').val('Luiz Santos');
+                                            break;
+                                        case '3':
+                                            $('#tipoEnsino').val('Ensino Infantil');
+                                            $('#descricaoTurno').val('Vespertino');
+                                            $('#anoLetivo').val('2020');
+                                            $('#nomeProfessor').val('Luiza Mota');
+                                            break;
+                                        case '4':
+                                            $('#tipoEnsino').val('Ensino Fundamental');
+                                            $('#descricaoTurno').val('Noturno');
+                                            $('#anoLetivo').val('2020');
+                                            $('#nomeProfessor').val('Pedro Henrique');
+                                            break;
+                                        case '5':
+                                            $('#tipoEnsino').val('Ensino Infantil');
+                                            $('#descricaoTurno').val('Vespertino');
+                                            $('#anoLetivo').val('2020');
+                                            $('#nomeProfessor').val('Leticia Fontinely');
+                                            break;
+                                        default:
+                                            break;
+                                    }
+                                });
+
+                                $('#idEscola').change(function () {
+                                    $('#idTurma').prop('disabled', false);
+                                });
+
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
