@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="/ModuloAdministrador/css/intecoesEducativas.css">
+    <title></title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <h3 class="col">Intenções Educativas Anual</h3>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="exampleFormControlInput1">Pesquisa</label>
+                <input type="text" class="form-control form-control-md" id="exampleFormControlInput1"
+                    placeholder="Descrição">
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="exampleFormControlSelect1">Tipo de pesquisa</label>
+                <select class="form-control form-control-md" id="exampleFormControlSelect1">
+                    <option selected>Por descrição</option>
+                    <option>Por série</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="teste" style="opacity: 0%;" class="hide-show-responsive">teste</label>
+                <button type="button" id="teste" class="btn btn-primary form-control form-control-md">Buscar</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table table-sm table-striped table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Série</th>
+                            <th scope="col">Opções</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>GEOGRAFIA</td>
+                            <td>1º Série</td>
+                            <td>
+                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".bd-example-modal-lg" onclick="
+                                    $('#btn-excluir').hide();
+                                    $('#btn-editar').show(); 
+                                    $('#form-principal .hide-show').each(function(){
+                                        $(this).prop('disabled', true);
+                                    });
+
+                                    $('#descricao').val('GEOGRAFIA');
+                                    $('#idSerie').val('1');
+                                    ">Editar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
+                    onclick="
+                $('#btn-editar, #btn-excluir').hide();
+                $('#form-principal .hide-show').each(function(){
+                    $(this).prop('disabled', false);
+                });
+                $('form')[0].reset();
+                ">Novo Registro</button>
+            </div>
+        </div>
+
+        <!-- MODAL CRUD -->
+         <!-- MODAL CRUD -->
+         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+         aria-hidden="true">
+         <div class="modal-dialog modal-lg">
+             <div class="modal-content">
+                 <div class="modal-header">
+                     <h5 class="modal-title" id="exampleModalLabel">Registro de Intenções Educativas Anual</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                     </button>
+                 </div>
+                 <div class="modal-body">
+
+                     <div class="container-fluid">
+                         <form id="form-principal">
+                             <div class="form-row">
+                                 <div class="form-group col-xs-12 col-lg-12">
+                                     <label for="descricao">Descrição</label>
+                                     <input type="text" class="form-control form-control-lg hide-show"
+                                         id="descricao"
+                                         placeholder="Descrição da Intenção Educativa">
+                                 </div>
+                             </div>
+
+                             <div class="form-row">
+                                <div class="form-group col-xs-12 col-lg-12">
+                                    <label for="exampleFormControlSelect1">Série</label>
+                                    <select class="form-control form-control-lg hide-show" id="idSerie">
+                                        <option selected disabled>Selecione uma série</option>
+                                        <option value="1">1º Série</option>
+                                        <option>2º Série</option>
+                                        <option>3º Série</option>
+                                        <option>4º Série</option>
+                                        <option>5º Série</option>
+                                    </select>
+                                </div>
+                             </div>
+
+                             <div class="form-row">
+                                 <div class="col">
+                                     <button type="button" class="btn btn-lg btn-primary mb-2"
+                                         onclick="alert('Registro salvo com sucesso!')">Salvar</button>
+
+                                     <button id="btn-editar" type="button" class="btn btn-lg btn-primary mb-2"
+                                         onclick="
+                                     $('#form-principal .hide-show').each(function(){
+                                         $(this).prop('disabled', false);
+                                     });
+                                     $('#btn-excluir').show();
+                                     ">Editar</button>
+                                     <button id="btn-excluir" type="button"
+                                         class="btn btn-lg btn-primary mb-2">Excluir</button>
+                                 </div>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+    </div>
+</body>
+
+</html>

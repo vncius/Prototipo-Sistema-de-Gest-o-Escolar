@@ -25,16 +25,29 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <!--<li class="nav-item active">-->
+                    <a class="nav-link" href="#" onclick="$('#container').load('planejamentoIntencoesEducativas.html');">Planejamento Educativo Anual
+                        <!--<span class="sr-only">(current)</span>--></a>
+                </li>
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
                         Cadastros
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#" onclick="$('#container').load('registrarDiario.html');">Diário</a>
-                        <a class="dropdown-item" href="#" onclick="$('#container').load('registrarTurmas.html');">Turmas</a>
-                        <a class="dropdown-item" href="#" onclick="$('#container').load('registrarAluno.html');">Alunos</a>
-                        <a class="dropdown-item" href="#" onclick="$('#container').load('registrarEscolas.html');">Escolas</a>
-                        <a class="dropdown-item" href="#" onclick="$('#container').load('registrarProfessores.html');">Professores</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="$('#container').load('registrarDiario.html');">Diário</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="$('#container').load('registrarTurmas.html');">Turmas</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="$('#container').load('registrarAluno.html');">Alunos</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="$('#container').load('registrarEscolas.html');">Escolas</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="$('#container').load('registrarProfessores.html');">Professores</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="$('#container').load('intencoesEducativas_old.html');">Intenções Educativas</a>
                     </div>
                 </li>
 
@@ -44,9 +57,13 @@
                         Configurações
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#" onclick="$('#container').load('registrarTiposDeEnsinos.html');">Configurar Tipos de ensinos</a>
-                        <a class="dropdown-item" href="#" onclick="$('#container').load('registrarTurnos.html');">Configurar Turnos</a>
-                        <a class="dropdown-item" href="#" onclick="$('#container').load('registrarSeries.html');">Configurar Séries</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="$('#container').load('registrarTiposDeEnsinos.html');">Configurar Tipos de
+                            ensinos</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="$('#container').load('registrarTurnos.html');">Configurar Turnos</a>
+                        <a class="dropdown-item" href="#"
+                            onclick="$('#container').load('registrarSeries.html');">Configurar Séries</a>
                     </div>
                 </li>
             </ul>
@@ -56,7 +73,7 @@
 
 <body>
     <div id="container" class="container">
-        
+
     </div>
 
     <!-- Optional JavaScript -->
@@ -70,7 +87,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-        <script src="js/registrarDiario.js"></script>
+    <script src="js/registrarDiario.js"></script>
 </body>
 
 </html>

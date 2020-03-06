@@ -1,0 +1,34 @@
+body, html, .container {
+    height: 90%!important;
+    width: 100%;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.centralizar-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    color: white;
+}
+
+body {
+    background-image: url("../img/background1.jpg");
+    background-repeat: no-repeat;
+    background-size: unset;
+}
+
+th, td {
+    vertical-align: middle!important;
+}
+
+@media only screen and (max-width: 600px) {
+    .hide-show-responsive {
+        display: none;
+    }
+}
