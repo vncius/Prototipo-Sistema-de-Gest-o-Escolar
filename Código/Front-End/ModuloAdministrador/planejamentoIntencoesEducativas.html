@@ -7,20 +7,46 @@
 </head>
 
 <body>
-
-    <div class="container-fluid">
-        <div class="row align-items-center">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <div class="container-fluid" style="margin-bottom: 25px;">
+        <div class="row">
             <div class="col">
-                <h3>Planejamento de Intenções Educativas</h3>
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h3>Planejamento de Intenções Educativas</h3>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+    <div id="container-selecao" class="container-fluid">
+        <div class="row">
+            <div class="col-6">
+                <div>
+                    <label for="exampleFormControlSelect1">Selecione uma intenção Educativa</label>
+                    <select class="form-control hide-show" id="idIntencao">
+                        <option selected disabled>Selecione</option>
+                        <option value="1">Geografia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-4">
+                <div>
+                    <label for="exampleFormControlTextarea1" style="opacity: 0%;">A</label>
+                    <button id="btn-selecionar" type="button"
+                        class="btn btn-primary form-control form-control-md">Selecionar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container-principal" class="container-fluid">
         <!-- Nav tabs -->
         <div class="row">
             <div class="col">
                 <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#home">Competências
-                            Especificas</a>
+                        <a class="nav-link active" data-toggle="tab" href="#home">Competências Especificas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#menu1">Conteudos</a>
@@ -39,7 +65,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="div-table-subcadastros">
-                            <table class="table table-sm table-bordered table-hover table-competencias">
+                            <table id="table-competencias"
+                                class="table table-sm table-bordered table-hover tables-intencoes">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th scope="col">Lista de competências</th>
@@ -49,7 +76,7 @@
                                     <tr>
                                         <th scope="row">Compreender as Ciências da Natureza como empreendimento humano,
                                             e o conhecimento científico como provisório, cultural e histórico.</th>
-                                        
+
                                     </tr>
                                     <tr>
                                         <th scope="row">Compreender conceitos fundamentais e estruturas explicativas das
@@ -58,7 +85,7 @@
                                             científicas, tecnológicas, socioambientais e do mundo do trabalho, continuar
                                             aprendendo e colaborar para a construção de uma sociedade justa, democrática
                                             e inclusiva.</th>
-                                        
+
                                     </tr>
                                     <tr>
                                         <th scope="row">Analisar, compreender e explicar características, fenômenos e
@@ -67,14 +94,14 @@
                                             a curiosidade para fazer perguntas, buscar respostas e criar soluções
                                             (inclusive tecnológicas) com base nos conhecimentos das Ciências da
                                             Natureza.</th>
-                                        
+
                                     </tr>
                                     <tr>
                                         <th scope="row">Avaliar aplicações e implicações políticas, socioambientais e
                                             culturais da ciência e de suas tecnologias para propor alternativas aos
                                             desafios do mundo contemporâneo, incluindo aqueles relativos ao mundo do
                                             trabalho.</th>
-                                        
+
                                     </tr>
                                 </tbody>
                             </table>
@@ -92,54 +119,55 @@
                 <div class="row">
                     <div class="col-6">
                         <button id="btn-excluir" type="button"
-                        class="btn btn-primary form-control form-control-md">Adicionar</button>
+                            class="btn btn-primary form-control form-control-md">Adicionar</button>
                     </div>
                     <div class="col-6">
                         <button id="btn-excluir" type="button"
-                        class="btn btn-primary form-control form-control-md">Remover</button>
+                            class="btn btn-primary form-control form-control-md">Remover</button>
                     </div>
                 </div>
-                
+
             </div>
             <!-- FORM 2 -->
             <div id="menu1" class="tab-pane fade"><br>
                 <div class="row">
                     <div class="col-12">
                         <div class="div-table-subcadastros">
-                            <table class="table table-sm table-bordered table-hover table-competencias">
+                            <table id="table-conteudos"
+                                class="table table-sm table-bordered table-hover tables-intencoes">
                                 <thead class="thead-dark">
                                     <tr>
-                                        <th scope="col">Lista de competências</th>
+                                        <th scope="col">Lista de Conteudos</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <th scope="row">Organizando os seres vivos em grupos</th>
-                                        
+
                                     </tr>
                                     <tr>
                                         <th scope="row">A alimentação e a reprodução dos animais</th>
-                                        
+
                                     </tr>
                                     <tr>
                                         <th scope="row">A terra e seus recursos</th>
-                                        
+
                                     </tr>
                                     <tr>
                                         <th scope="row">O solo</th>
-                                        
+
                                     </tr>
                                     <tr>
                                         <th scope="row">Biomas brasileiros</th>
-                                        
+
                                     </tr>
                                     <tr>
                                         <th scope="row">Nós e o planeta</th>
-                                        
+
                                     </tr>
                                     <tr>
                                         <th scope="row">O lixo</th>
-                                        
+
                                     </tr>
                                 </tbody>
                             </table>
@@ -157,11 +185,11 @@
                 <div class="row">
                     <div class="col-6">
                         <button id="btn-excluir" type="button"
-                        class="btn btn-primary form-control form-control-md">Adicionar</button>
+                            class="btn btn-primary form-control form-control-md">Adicionar</button>
                     </div>
                     <div class="col-6">
                         <button id="btn-excluir" type="button"
-                        class="btn btn-primary form-control form-control-md">Remover</button>
+                            class="btn btn-primary form-control form-control-md">Remover</button>
                     </div>
                 </div>
 
@@ -172,101 +200,17 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-
-
-
-    <!-- <div class="row">
-            <div class="form-group col-md-6">
-                <label for="exampleFormControlInput1">Pesquisa</label>
-                <input type="text" class="form-control form-control-md" id="exampleFormControlInput1"
-                    placeholder="Descrição">
-            </div>
-
-            <div class="form-group col-md-4">
-                <label for="exampleFormControlSelect1">Tipo de pesquisa</label>
-                <select class="form-control form-control-md" id="exampleFormControlSelect1">
-                    <option selected>Por descrição</option>
-                    <option>Por série</option>
-                </select>
-            </div>
-
-            <div class="form-group col-md-2">
-                <label for="teste" style="opacity: 0%;" class="hide-show-responsive">teste</label>
-                <button type="button" id="teste" class="btn btn-primary form-control form-control-md">Buscar</button>
-            </div>
-        </div> -->
-
-    <!-- <div class="row">
-            <div class="col">
-                <table class="table table-sm table-striped table-bordered table-hover">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Descrição</th>
-                            <th scope="col" class="hide-show-responsive">Série</th>
-                            <th scope="col">Opções</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>CIÊNCIAS DA NATUREZA</td>
-                            <td class="hide-show-responsive">1º Série</td>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target=".bd-example-modal-lg" onclick="
-                                    // $('#btn-excluir').hide();
-                                    // $('#btn-editar').show(); 
-                                    // $('#form-principal .hide-show').each(function(){
-                                    //     $(this).prop('disabled', true);
-                                    // });
-
-                                    // $('#descricao').val('GEOGRAFIA');
-                                    // $('#idSerie').val('1');
-                                    ">Editar</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div> -->
-
-    <!-- <div class="row">
-            <div class="col">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
-                    onclick="
-                // $('#btn-editar, #btn-excluir').hide();
-                // $('#form-principal .hide-show').each(function(){
-                //     $(this).prop('disabled', false);
-                // });
-                // $('form')[0].reset();
-                ">Novo Registro</button>
-            </div>
-        </div> -->
-
-    <!-- MODAL CRUD -->
-    <!-- MODAL CRUD -->
-    <!-- <div class="modal fade bd-example-modal-lg" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Registro de Intenções Educativas Anual</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        
-                    </div>
-                </div>
-            </div>
-        </div> -->
 </body>
+
+<script src="./js/planejamentoIntecoesEducativas.js"></script>
+<script>
+    $('#container-principal').hide();
+
+    $('#btn-selecionar').on('click', function () {
+        $('#container-selecao').hide();
+        $('#container-principal').show();
+    });
+
+</script>
 
 </html>

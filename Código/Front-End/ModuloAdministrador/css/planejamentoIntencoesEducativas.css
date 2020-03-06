@@ -14,12 +14,12 @@ table thead tr th:first-child, table tbody tr th:first-child {
     width: 110px;
 }
 
-.tables-intencoes table thead tr th:last-child, table tbody tr td:last-child {
+.table-competencias table thead tr th:last-child, table tbody tr td:last-child {
     width: 70px;
     text-align: center;
 }
 
-.tables-intencoes thead tr th:first-child, table tbody tr th:first-child {
+.table-competencias thead tr th:first-child, table tbody tr th:first-child {
     text-align: left;
     width: auto;
 }
@@ -53,6 +53,6 @@ table thead tr th:first-child, table tbody tr th:first-child {
     height: 250px;
 }
 
-.tables-intencoes tbody tr th {
+.table-competencias tbody tr th {
     font-weight: normal;
 }
