@@ -213,15 +213,18 @@
                                     <tr>
                                         <th scope="row">
                                             <h5>Unidade: MATÉRIA E ENERGIA</h5>
-                                            <table class="table bg-info">
+                                            <table class="table bg-info table-und-tem-interna">
                                                 <thead class="bg-info">
                                                     <tr>
+                                                        <th scope="col"></th>
                                                         <th scope="col">OBJETOS DE CONHECIMENTO</th>
                                                         <th scope="col">HABILIDADES</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
+                                                        <th scope="col"><i class="material-icons"
+                                                            onclick="alert('Excluido.')">remove_circle_outline</i></th>
                                                         <th scope="row">
                                                             Podução de som<br>
                                                             Efeitos da luz nos materiais
@@ -233,6 +236,8 @@
                                                         </th>
                                                     </tr>
                                                     <tr>
+                                                        <th scope="col"><i class="material-icons"
+                                                            onclick="alert('Excluido.')">remove_circle_outline</i></th>
                                                         <th scope="row">
                                                             Saúde auditiva e visual
                                                         </th>
@@ -267,15 +272,18 @@
                                     <tr>
                                         <th scope="row">
                                             <h5>Unidade: VIDA E EVOLUÇÃO</h5>
-                                            <table class="table bg-info">
+                                            <table class="table bg-info table-und-tem-interna">
                                                 <thead class="bg-info">
                                                     <tr>
+                                                        <th scope="col"></th>
                                                         <th scope="col">OBJETOS DE CONHECIMENTO</th>
-                                                        <th scope="col">HABILIDADES</th>
+                                                        <th scope="col">HABILIDADES</th>                                                        
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
+                                                        <th scope="col"><i class="material-icons"
+                                                            onclick="alert('Excluido.')">remove_circle_outline</i></th>
                                                         <th scope="row">
                                                             Características e desenvolvimento dos animais
                                                         </th>
@@ -284,8 +292,11 @@
                                                             (o que comem, como se reproduzem, como se deslocam etc.) dos
                                                             animais mais comuns no ambiente próximo.
                                                         </th>
+                                                        
                                                     </tr>
                                                     <tr>
+                                                        <th scope="col"><i class="material-icons"
+                                                            onclick="alert('Excluido.')">remove_circle_outline</i></th>
                                                         <th scope="row">
 
                                                         </th>
@@ -348,7 +359,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Cadastro unidades temáticas</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Adicionar linha a unidade temática</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -363,14 +374,15 @@
                                             <div class="card-header">
                                                 OBJETOS DE CONHECIMENTO
                                             </div>
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div class="list-conhecimentos">
-
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                            <ul class="list-group list-group-flush div-list-scroll">
+                                                <li class="list-group-item list-group-item-action">Cras justo odio</li>
+                                                <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
+                                                <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
+                                                <li class="list-group-item list-group-item-action">Cras justo odio</li>
+                                                <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
+                                                <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
+                                            </ul>
+                                            <div class="card-body">                                                
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <label for="exampleFormControlTextarea1">Descrição
@@ -396,12 +408,12 @@
                                                 HABILIDADES
                                             </div>
                                             <ul class="list-group list-group-flush div-list-scroll">
-                                                <li class="list-group-item">Cras justo odio</li>
-                                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                                <li class="list-group-item">Vestibulum at eros</li>
-                                                <li class="list-group-item">Cras justo odio</li>
-                                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                                <li class="list-group-item">Vestibulum at eros</li>
+                                                <li class="list-group-item list-group-item-action">Cras justo odio</li>
+                                                <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
+                                                <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
+                                                <li class="list-group-item list-group-item-action">Cras justo odio</li>
+                                                <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
+                                                <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
                                             </ul>
 
                                             <div class="card-body">
@@ -423,6 +435,11 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top: 10px;">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-primary form-control form-control-sm">Salvar</button>
                                     </div>
                                 </div>
                             </div>

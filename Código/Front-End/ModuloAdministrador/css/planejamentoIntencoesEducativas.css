@@ -56,6 +56,11 @@ tbody tr th {
     text-align: center;
 }
 
+.table-und-tem-interna tr th:first-child {
+    width: 35px!important;
+    text-align: center;
+}
+
 .div-list-scroll {
     /* border-color: darkgray ;
     border-style: groove; */
