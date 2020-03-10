@@ -1,5 +1,5 @@
 var tabela = $('.tables-intencoes');
-var linhas = $('tr');
+var linhas = $('.tables-intencoes tr');
 
 for (var i = 0; i < linhas.length; i++) {
     var linha = linhas[i];

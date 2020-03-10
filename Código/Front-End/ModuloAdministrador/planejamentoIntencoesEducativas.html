@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="/ModuloAdministrador/css/intecoesEducativas.css">
+    <link rel="stylesheet" href="/ModuloAdministrador/css/planejamentoIntencoesEducativas.css">
     <title></title>
 </head>
 
@@ -27,7 +27,7 @@
                     <label for="exampleFormControlSelect1">Selecione uma intenção Educativa</label>
                     <select class="form-control hide-show" id="idIntencao">
                         <option selected disabled>Selecione</option>
-                        <option value="1">Geografia</option>
+                        <option value="1">CIÊNCIAS DA NATUREZA</option>
                     </select>
                 </div>
             </div>
@@ -54,6 +54,9 @@
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#menu2">Unidades Temáticas</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" data-toggle="tab" href="#menu3">Finalizar</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -64,7 +67,7 @@
             <div id="home" class="tab-pane active"><br>
                 <div class="row">
                     <div class="col-12">
-                        <div class="div-table-subcadastros">
+                        <div class="div-table-scroll">
                             <table id="table-competencias"
                                 class="table table-sm table-bordered table-hover tables-intencoes">
                                 <thead class="thead-dark">
@@ -132,7 +135,7 @@
             <div id="menu1" class="tab-pane fade"><br>
                 <div class="row">
                     <div class="col-12">
-                        <div class="div-table-subcadastros">
+                        <div class="div-table-scroll">
                             <table id="table-conteudos"
                                 class="table table-sm table-bordered table-hover tables-intencoes">
                                 <thead class="thead-dark">
@@ -194,11 +197,302 @@
                 </div>
 
             </div>
+            <!-- UNIDADES TEMATICAS -->
             <div id="menu2" class="tab-pane fade"><br>
-                TESTE 3
-                <!-- FORM 3 -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="div-table-scroll">
+                            <table class="table table-sm table-bordered table-unidades-tematicas">
+                                <thead class="thead-dark table-unidades-tematicas-thead">
+                                    <tr>
+                                        <th scope="col">Unidades Temáticas</th>
+                                        <th scope="col">Opções</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-unidades-tematicas-tbody">
+                                    <tr>
+                                        <th scope="row">
+                                            <h5>Unidade: MATÉRIA E ENERGIA</h5>
+                                            <table class="table bg-info">
+                                                <thead class="bg-info">
+                                                    <tr>
+                                                        <th scope="col">OBJETOS DE CONHECIMENTO</th>
+                                                        <th scope="col">HABILIDADES</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            Podução de som<br>
+                                                            Efeitos da luz nos materiais
+                                                        </th>
+                                                        <th>
+                                                            (EF03CI01) Produzir diferentes sons a partir da vibração de
+                                                            variados objetos e identificar variáveis que influem nesse
+                                                            fenômeno.
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            Saúde auditiva e visual
+                                                        </th>
+                                                        <th>
+                                                            (EF03CI02) Experimentar e relatar o que ocorre com a
+                                                            passagem da luz através de objetos transparentes (copos,
+                                                            janelas de vidro, lentes, prismas, água etc.), no contato
+                                                            com superfícies polidas (espelhos) e na intersecção com
+                                                            objetos opacos (paredes, pratos, pessoas e outros objetos de
+                                                            uso cotidiano).
+                                                            <hr>
+                                                            (EF03CI03) Discutir hábitos necessários para a manutenção da
+                                                            saúde auditiva e visual considerando as condições do
+                                                            ambiente em termos de som e luz.
+                                                        </th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </th>
+                                        <th>
+                                            <i class="material-icons" data-toggle="modal"
+                                                data-target=".bd-example-modal-lg">add_circle_outline</i>
+                                            <i class="material-icons"
+                                                onclick="alert('Excluido.')">remove_circle_outline</i>
+                                            <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                data-target=".bd-example-modal-lg">+Unidades</button>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                data-target=".bd-example-modal-lg">Remover</button> -->
+                                        </th>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <h5>Unidade: VIDA E EVOLUÇÃO</h5>
+                                            <table class="table bg-info">
+                                                <thead class="bg-info">
+                                                    <tr>
+                                                        <th scope="col">OBJETOS DE CONHECIMENTO</th>
+                                                        <th scope="col">HABILIDADES</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">
+                                                            Características e desenvolvimento dos animais
+                                                        </th>
+                                                        <th>
+                                                            (EF03CI04) Identificar características sobre o modo de vida
+                                                            (o que comem, como se reproduzem, como se deslocam etc.) dos
+                                                            animais mais comuns no ambiente próximo.
+                                                        </th>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">
+
+                                                        </th>
+                                                        <th>
+                                                            (EF03CI05) Descrever e comunicar as alterações que ocorrem
+                                                            desde o nascimento em animais de diferentes meios terrestres
+                                                            ou aquáticos, inclusive o homem.
+                                                            <hr>
+                                                            (EF03CI06) Comparar alguns animais e organizar grupos com
+                                                            base em características externas comuns (presença de penas,
+                                                            pelos, escamas, bico, garras, antenas, patas etc.).
+                                                        </th>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                        </th>
+                                        <th>
+                                            <i class="material-icons" data-toggle="modal"
+                                                data-target=".bd-example-modal-lg">add_circle_outline</i>
+                                            <i class="material-icons"
+                                                onclick="alert('Excluido.')">remove_circle_outline</i>
+                                            <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                data-target=".bd-example-modal-lg">+Unidades</button>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                data-target=".bd-example-modal-lg">Remover</button> -->
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-12">
+                        <label for="exampleFormControlTextarea1">Descrição da unidade temática</label>
+                        <input class="form-control" id="exampleFormControlTextarea1" rows="2"></input>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <button id="btn-excluir" type="button"
+                            class="btn btn-primary form-control form-control-md">Adicionar</button>
+                    </div>
+                </div>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+                TESTE
             </div>
         </div>
+    </div>
+    <!--TELA FINAL-->
+    
+
+    <!-- MODAL CRUD -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cadastro unidades temáticas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <div class="row">
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                OBJETOS DE CONHECIMENTO
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="list-conhecimentos">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="exampleFormControlTextarea1">Descrição
+                                                            conhecimento</label>
+                                                        <input class="form-control col-12"
+                                                            id="exampleFormControlTextarea1" rows="2"></input>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button type="button"
+                                                            class="btn btn-secondary form-control form-control-md">Adicionar</button>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button type="button"
+                                                            class="btn btn-secondary form-control form-control-md">Remover</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                HABILIDADES
+                                            </div>
+                                            <ul class="list-group list-group-flush div-list-scroll">
+                                                <li class="list-group-item">Cras justo odio</li>
+                                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                                <li class="list-group-item">Vestibulum at eros</li>
+                                                <li class="list-group-item">Cras justo odio</li>
+                                                <li class="list-group-item">Dapibus ac facilisis in</li>
+                                                <li class="list-group-item">Vestibulum at eros</li>
+                                            </ul>
+
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <label for="exampleFormControlTextarea1">Descrição
+                                                            habilidade</label>
+                                                        <input class="form-control col-12"
+                                                            id="exampleFormControlTextarea1" rows="2"></input>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button type="button"
+                                                            class="btn btn-secondary form-control form-control-sm">Adicionar</button>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <button type="button"
+                                                            class="btn btn-secondary form-control form-control-sm">Remover</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- <form id="form-principal">
+                        <div class="form-row">
+                            <div class="form-group col-xs-12 col-lg-12">
+                                <label for="exampleFormControlInput1 ">Nome do aluno</label>
+                                <input type="text" class="form-control form-control-lg hide-show" id="nomeAluno"
+                                    placeholder="Nome">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-xs-12 col-lg-6">
+                                <label for="exampleFormControlSelect1">Turma</label>
+                                <select class="form-control form-control-lg hide-show" id="idTurma">
+                                    <option selected disabled>Selecione uma turma</option>
+                                    <option value="1">Turma - A</option>
+                                    <option>Turma - B</option>
+                                    <option>Turma - C</option>
+                                    <option>Turma - D</option>
+                                    <option>Turma - E</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col-xs-12 col-lg-6">
+                                <label for="exampleFormControlSelect1">Status</label>
+                                <select class="form-control form-control-lg hide-show" id="idStatus">
+                                    <option selected disabled>Selecione o status</option>
+                                    <option value="1">Ativo</option>
+                                    <option>Transferido</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="col">
+                                <button type="button" class="btn btn-lg btn-primary mb-2"
+                                    onclick="alert('Registro salvo com sucesso!')">Salvar</button>
+
+                                <button id="btn-editar" type="button" class="btn btn-lg btn-primary mb-2"
+                                    onclick="
+                                $('#form-principal .hide-show').each(function(){
+                                    $(this).prop('disabled', false);
+                                });
+                                $('#btn-excluir').show();
+                                ">Editar</button>
+                                <button id="btn-excluir" type="button"
+                                    class="btn btn-lg btn-primary mb-2">Excluir</button>
+                            </div>
+                        </div>
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 </body>
 
@@ -210,7 +504,6 @@
         $('#container-selecao').hide();
         $('#container-principal').show();
     });
-
 </script>
 
 </html>
