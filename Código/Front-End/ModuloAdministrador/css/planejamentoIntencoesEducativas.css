@@ -18,21 +18,9 @@ tbody tr th {
 }
 
 .table {
+    text-align: left;
     background-color: white!important;
     table-layout: fixed;
-}
-
-@media only screen and (max-width: 600px) {
-    table thead tr th:last-child, table tbody tr td:last-child {
-        width: 70px!important;
-        text-align: center;
-    }
-}
-
-@media only screen and (min-width: 601px) {
-    .modal .modal-dialog {
-        max-width: 80%;
-    }
 }
 
 .div-table-scroll {
@@ -41,24 +29,37 @@ tbody tr th {
     border-style: groove; */
     max-width: 100%;
     overflow-y: scroll;
-    height: 500px;
     background: white;
 }
-
 
 .table-competencias tbody tr th {
     font-weight: normal;
 }
 
 /*UNIDADES TEMATICAS*/
-.table-unidades-tematicas-thead tr th:last-child, .table-unidades-tematicas-tbody tr td:last-child {
+
+#thead-unidades-tematicas tr th:last-child, #tbody-unidades-tematicas tr td:last-child {
     width: 70px;
-    text-align: center;
 }
 
-.table-und-tem-interna tr th:first-child {
-    width: 35px!important;
-    text-align: center;
+#thead-unidades-tematicas tr th:last-child, #tbody-unidades-tematicas tr td:last-child {
+    width: 35px;
+}
+
+#table-unidades-tematicas {
+    margin-bottom: 0;
+}
+
+ .hide-sub {
+     height: 0;
+ }
+
+.col-option-unidade-tematica {
+    background-color: #e6e6e6;
+}
+
+.table-sub-unidades-tematicas tr th:first-child, #table-conteudos tr th:first-child, #table-competencias tr th:first-child {
+    width: 35px;
 }
 
 .div-list-scroll {
@@ -71,7 +72,7 @@ tbody tr th {
 
 .list-conhecimentos, .list-habilidades {
     height: 150px;
-    background:   #f2f2f2;
+    background: #f2f2f2;
     width: 100%;
     margin: 0px 0px 0px 0px;
 }
@@ -82,4 +83,35 @@ tbody tr th {
 
 hr {
     margin: 0;
+}
+
+#menu3 .row {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.card-body .col-12:first-child {
+    margin-bottom: 10px;
+}
+
+/*MEDIDAS DE TELAS*/
+@media only screen and (max-width: 600px) {
+    table thead tr th:last-child, table tbody tr td:last-child {
+        width: 30px!important;
+    }
+    .table-sub-unidades-tematicas tr th:first-child, #table-conteudos tr th:first-child, #table-competencias tr th:first-child {
+        width: 15px!important;
+    }
+    .div-table-scroll {
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    #modalLinhaUnidadeTematica .modal-dialog {
+        max-width: 80%;
+    }    
+    .div-table-scroll {
+        height: 500px;
+    }
 }

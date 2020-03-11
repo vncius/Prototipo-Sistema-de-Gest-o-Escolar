@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="/ModuloAdministrador/css/planejamentoIntencoesEducativas.css">
-    <title></title>
+  <link rel="stylesheet" href="/ModuloAdministrador/css/planejamentoIntencoesEducativas.css">
+  <title></title>
 </head>
 
 <body>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <div class="container-fluid" style="margin-bottom: 25px;">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <!-- <div class="container-fluid" style="margin-bottom: 25px;">
         <div class="row">
             <div class="col">
                 <div class="row align-items-center">
@@ -19,508 +19,605 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div id="container-selecao" class="container-fluid">
-        <div class="row">
-            <div class="col-6">
-                <div>
-                    <label for="exampleFormControlSelect1">Selecione uma intenção Educativa</label>
-                    <select class="form-control hide-show" id="idIntencao">
-                        <option selected disabled>Selecione</option>
-                        <option value="1">CIÊNCIAS DA NATUREZA</option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-4">
-                <div>
-                    <label for="exampleFormControlTextarea1" style="opacity: 0%;">A</label>
-                    <button id="btn-selecionar" type="button"
-                        class="btn btn-primary form-control form-control-md">Selecionar</button>
-                </div>
-            </div>
+    </div> -->
+  <div id="container-selecao" class="container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <div>
+          <label for="exampleFormControlSelect1">Selecione uma intenção Educativa</label>
+          <select class="form-control hide-show" id="idIntencao">
+            <option selected disabled>Selecione</option>
+            <option value="1">CIÊNCIAS DA NATUREZA</option>
+          </select>
         </div>
-    </div>
-    <div id="container-principal" class="container-fluid">
-        <!-- Nav tabs -->
-        <div class="row">
-            <div class="col">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#home">Competências Especificas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#menu1">Conteudos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#menu2">Unidades Temáticas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#menu3">Finalizar</a>
-                    </li>
-                </ul>
-            </div>
+      </div>
+      <div class="col-4">
+        <div>
+          <label for="exampleFormControlTextarea1" style="opacity: 0%;">A</label>
+          <button id="btn-selecionar" type="button"
+            class="btn btn-primary form-control form-control-md">Selecionar</button>
         </div>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <!-- FORM 1 -->
-            <div id="home" class="tab-pane active"><br>
+      </div>
+    </div>
+  </div>
+  <div id="container-principal" class="container-fluid">
+    <!-- Nav tabs -->
+    <div class="row">
+      <div class="col">
+        <div class="card text-center">
+          <div class="card-header">
+            <ul class="nav nav-tabs card-header-tabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#home">Competências Especificas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu1">Conteudos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu2">Unidades Temáticas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu3">Finalizar</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <div class="tab-content">
+              <!-- FORM 1 - LISTA DE COMPETÊNCIAS ---------------------------------------------------------------->
+              <div id="home" class="tab-pane active"><br>
                 <div class="row">
-                    <div class="col-12">
-                        <div class="div-table-scroll">
-                            <table id="table-competencias"
-                                class="table table-sm table-bordered table-hover table-striped tables-intencoes">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">Lista de competências</th>
-                                    </tr>
+                  <div class="col-12">
+                    <div class="div-table-scroll">
+                      <table id="table-competencias" class="table table-sm table-bordered table-hover table-striped">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">
+                              <i class="material-icons" data-toggle="modal" data-target="#modalCompetencias">
+                                add_circle_outline
+                              </i>
+                            </th>
+                            <th scope="col">Lista de competências
+
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="col"><i class="material-icons"
+                                onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </th>
+                            <th>Compreender as Ciências da Natureza como
+                              empreendimento humano,
+                              e o conhecimento científico como provisório, cultural e
+                              histórico.</th>
+
+                          </tr>
+                          <tr>
+                            <th scope="col"><i class="material-icons"
+                                onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </th>
+                            <th>Compreender conceitos fundamentais e estruturas
+                              explicativas das
+                              Ciências da Natureza, bem como dominar processos, práticas e
+                              procedimentos
+                              da investigação científica, de modo a sentir segurança no
+                              debate de questões
+                              científicas, tecnológicas, socioambientais e do mundo do
+                              trabalho, continuar
+                              aprendendo e colaborar para a construção de uma sociedade
+                              justa, democrática
+                              e inclusiva.</th>
+
+                          </tr>
+                          <tr>
+                            <th scope="col"><i class="material-icons"
+                                onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </th>
+                            <th>Analisar, compreender e explicar
+                              características, fenômenos e
+                              processos relativos ao mundo natural, social e tecnológico
+                              (incluindo o
+                              digital), como também as relações que se estabelecem entre
+                              eles, exercitando
+                              a curiosidade para fazer perguntas, buscar respostas e criar
+                              soluções
+                              (inclusive tecnológicas) com base nos conhecimentos das
+                              Ciências da
+                              Natureza.</th>
+
+                          </tr>
+                          <tr>
+                            <th scope="col"><i class="material-icons"
+                                onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </th>
+                            <th>Avaliar aplicações e implicações políticas,
+                              socioambientais e
+                              culturais da ciência e de suas tecnologias para propor
+                              alternativas aos
+                              desafios do mundo contemporâneo, incluindo aqueles relativos
+                              ao mundo do
+                              trabalho.</th>
+
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- FORM 2 - LISTA DE CONTEUDOS ---------------------------------------------------------------->
+              <div id="menu1" class="tab-pane fade"><br>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="div-table-scroll">
+                      <table id="table-conteudos" class="table table-sm table-bordered table-hover table-striped">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">
+                              <i class="material-icons" data-toggle="modal" data-target="#modalConteudos">
+                                add_circle_outline
+                              </i>
+                            </th>
+                            <th scope="col">Lista de Conteúdos</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="col"><i class="material-icons"
+                                onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </th>
+                            <th>Organizando os seres vivos em grupos</th>
+
+                          </tr>
+                          <tr>
+                            <th scope="col"><i class="material-icons"
+                                onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </th>
+                            <th>A alimentação e a reprodução dos animais</th>
+
+                          </tr>
+                          <tr>
+                            <th scope="col"><i class="material-icons"
+                                onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </th>
+                            <th>A terra e seus recursos</th>
+
+                          </tr>
+                          <tr>
+                            <th scope="col"><i class="material-icons"
+                                onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </th>
+                            <th>O solo</th>
+
+                          </tr>
+                          <tr>
+                            <th scope="col"><i class="material-icons"
+                                onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </th>
+                            <th>Biomas brasileiros</th>
+
+                          </tr>
+                          <tr>
+                            <th scope="col"><i class="material-icons"
+                                onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </th>
+                            <th>Nós e o planeta</th>
+
+                          </tr>
+                          <tr>
+                            <th scope="col"><i class="material-icons"
+                                onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </th>
+                            <th>O lixo</th>
+
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- FORM 3 - LISTA DE UNIDADES TEMÁTICAS ---------------------------------------------------------------->
+              <div id="menu2" class="tab-pane fade"><br>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="div-table-scroll">
+                      <table id="table-unidades-tematicas" class="table table-sm table-bordered">
+                        <thead id="thead-unidades-tematicas" class="thead-dark">
+                          <tr>
+                            <th scope="col">Unidades Temáticas
+                              <button id="btn-excluir" type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                                data-target="#modalUnidadeTematica">Adicionar</button>
+                            </th>
+                            <th scope="col"><i class="material-icons cursor-normal">
+                                settings
+                              </i></th>
+                          </tr>
+                        </thead>
+                        <tbody id="tbody-unidades-tematicas">
+                          <tr class="col-option-unidade-tematica">
+                            <th scope="row">
+                              <h5>Unidade: MATÉRIA E ENERGIA</h5>
+                              <!-- SUB TABLE --------------------------------->
+                              <table class="table bg-info table-sub-unidades-tematicas">
+                                <thead class="bg-info not-fixed">
+                                  <tr>
+                                    <th scope="col"><i class="material-icons" data-toggle="modal"
+                                        data-target="#modalLinhaUnidadeTematica">
+                                        add_circle_outline
+                                      </i></th>
+                                    <th scope="col">OBJETOS DE CONHECIMENTO</th>
+                                    <th scope="col">HABILIDADES</th>
+                                  </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">Compreender as Ciências da Natureza como empreendimento humano,
-                                            e o conhecimento científico como provisório, cultural e histórico.</th>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Compreender conceitos fundamentais e estruturas explicativas das
-                                            Ciências da Natureza, bem como dominar processos, práticas e procedimentos
-                                            da investigação científica, de modo a sentir segurança no debate de questões
-                                            científicas, tecnológicas, socioambientais e do mundo do trabalho, continuar
-                                            aprendendo e colaborar para a construção de uma sociedade justa, democrática
-                                            e inclusiva.</th>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Analisar, compreender e explicar características, fenômenos e
-                                            processos relativos ao mundo natural, social e tecnológico (incluindo o
-                                            digital), como também as relações que se estabelecem entre eles, exercitando
-                                            a curiosidade para fazer perguntas, buscar respostas e criar soluções
-                                            (inclusive tecnológicas) com base nos conhecimentos das Ciências da
-                                            Natureza.</th>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Avaliar aplicações e implicações políticas, socioambientais e
-                                            culturais da ciência e de suas tecnologias para propor alternativas aos
-                                            desafios do mundo contemporâneo, incluindo aqueles relativos ao mundo do
-                                            trabalho.</th>
-
-                                    </tr>
+                                  <tr>
+                                    <th scope="col"><i class="material-icons"
+                                        onclick="alert('Linha excluida')">remove_circle_outline</i>
+                                    </th>
+                                    <th scope="row">
+                                      Podução de som<br>
+                                      Efeitos da luz nos materiais
+                                    </th>
+                                    <th>
+                                      (EF03CI01) Produzir diferentes sons a partir
+                                      da vibração de
+                                      variados objetos e identificar variáveis que
+                                      influem nesse
+                                      fenômeno.
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th scope="col"><i class="material-icons"
+                                        onclick="alert('Linha excluida')">remove_circle_outline</i>
+                                    </th>
+                                    <th scope="row">
+                                      Saúde auditiva e visual
+                                    </th>
+                                    <th>
+                                      (EF03CI02) Experimentar e relatar o que
+                                      ocorre com a
+                                      passagem da luz através de objetos
+                                      transparentes (copos,
+                                      janelas de vidro, lentes, prismas, água
+                                      etc.), no contato
+                                      com superfícies polidas (espelhos) e na
+                                      intersecção com
+                                      objetos opacos (paredes, pratos, pessoas e
+                                      outros objetos de
+                                      uso cotidiano).
+                                      <hr>
+                                      (EF03CI03) Discutir hábitos necessários para
+                                      a manutenção da
+                                      saúde auditiva e visual considerando as
+                                      condições do
+                                      ambiente em termos de som e luz.
+                                    </th>
+                                  </tr>
                                 </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                              </table>
 
-                <div class="row">
-                    <div class="form-group col-12">
-                        <label for="exampleFormControlTextarea1">Descreva a intenção</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-6">
-                        <button id="btn-excluir" type="button"
-                            class="btn btn-primary form-control form-control-md">Adicionar</button>
-                    </div>
-                    <div class="col-6">
-                        <button id="btn-excluir" type="button"
-                            class="btn btn-primary form-control form-control-md">Remover</button>
-                    </div>
-                </div>
-
-            </div>
-            <!-- FORM 2 -->
-            <div id="menu1" class="tab-pane fade"><br>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="div-table-scroll">
-                            <table id="table-conteudos"
-                                class="table table-sm table-bordered table-hover table-striped tables-intencoes">
-                                <thead class="thead-dark">
-                                    <tr>
-                                        <th scope="col">Lista de Conteudos</th>
-                                    </tr>
+                            </th>
+                            <th class="col-option-unidade-tematica">
+                              <i class="material-icons" onclick="alert('Unidade temática excluida')">delete_outline</i>
+                            </th>
+                          </tr>
+                          <tr  class="col-option-unidade-tematica">
+                            <th scope="row">
+                              <h5>Unidade: VIDA E EVOLUÇÃO</h5>
+                              <!-- SUB TABLE --------------------------------->
+                              <table class="table bg-info table-sub-unidades-tematicas">
+                                <thead class="bg-info not-fixed">
+                                  <tr>
+                                    <th scope="col">
+                                      <i class="material-icons" data-toggle="modal"
+                                        data-target="#modalLinhaUnidadeTematica">
+                                        add_circle_outline
+                                      </i>
+                                    </th>
+                                    <th scope="col">OBJETOS DE CONHECIMENTO</th>
+                                    <th scope="col">HABILIDADES</th>
+                                  </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <th scope="row">Organizando os seres vivos em grupos</th>
+                                  <tr>
+                                    <th scope="col"><i class="material-icons"
+                                        onclick="alert('Linha excluida')">remove_circle_outline</i>
+                                    </th>
+                                    <th scope="row">
+                                      Características e desenvolvimento dos
+                                      animais
+                                    </th>
+                                    <th>
+                                      (EF03CI04) Identificar características sobre
+                                      o modo de vida
+                                      (o que comem, como se reproduzem, como se
+                                      deslocam etc.) dos
+                                      animais mais comuns no ambiente próximo.
+                                    </th>
+                                  </tr>
+                                  <tr>
+                                    <th scope="col"><i class="material-icons"
+                                        onclick="alert('Linha excluida')">remove_circle_outline</i>
+                                    </th>
+                                    <th scope="row">
 
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">A alimentação e a reprodução dos animais</th>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">A terra e seus recursos</th>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">O solo</th>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Biomas brasileiros</th>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Nós e o planeta</th>
-
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">O lixo</th>
-
-                                    </tr>
+                                    </th>
+                                    <th>
+                                      (EF03CI05) Descrever e comunicar as
+                                      alterações que ocorrem
+                                      desde o nascimento em animais de diferentes
+                                      meios terrestres
+                                      ou aquáticos, inclusive o homem.
+                                      <hr>
+                                      (EF03CI06) Comparar alguns animais e
+                                      organizar grupos com
+                                      base em características externas comuns
+                                      (presença de penas,
+                                      pelos, escamas, bico, garras, antenas, patas
+                                      etc.).
+                                    </th>
+                                  </tr>
                                 </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+                              </table>
 
+                            </th>
+                            <th class="col-option-unidade-tematica">
+                              <i class="material-icons" onclick="alert('Unidade temática excluida')">delete_outline</i>
+                            </th>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- FORM 4 - TELA FINALIZAR ---------------------------------------------------------------->
+              <div id="menu3" class="tab-pane fade">
                 <div class="row">
-                    <div class="form-group col-12">
-                        <label for="exampleFormControlTextarea1">Descrição do conteudo</label>
-                        <input class="form-control" id="exampleFormControlTextarea1" rows="2"></input>
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <h3>INTENÇÕES EDUCATIVAS PLANEJADAS PARA O ANO
+                          CIÊNCIAS DA NATUREZA
+                        </h3>
+                      </div>
                     </div>
+                  </div>
                 </div>
-
                 <div class="row">
-                    <div class="col-6">
-                        <button id="btn-excluir" type="button"
-                            class="btn btn-primary form-control form-control-md">Adicionar</button>
+                  <div class="col-md-4 col-xs-12">
+                    <div class="card">
+                      <div class="card-header">
+                        Competências
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Quantidade : 4</li>
+                      </ul>
                     </div>
-                    <div class="col-6">
-                        <button id="btn-excluir" type="button"
-                            class="btn btn-primary form-control form-control-md">Remover</button>
+                  </div>
+                  <div class="col-md-4 col-xs-12">
+                    <div class="card">
+                      <div class="card-header">
+                        Conteúdos
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Quantidade : 7</li>
+                      </ul>
                     </div>
+                  </div>
+                  <div class="col-md-4 col-xs-12">
+                    <div class="card">
+                      <div class="card-header">
+                        Unidades Temáticas
+                      </div>
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Quantidade : 2</li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
-
+                <div class="row">
+                  <div class="col">
+                    <button type="button" class="btn btn-primary"
+                      onclick="alert('Planejamento salvo com sucesso!')">Salvar
+                      planejamento</button>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- UNIDADES TEMATICAS -->
-            <div id="menu2" class="tab-pane fade"><br>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="div-table-scroll">
-                            <table class="table table-sm table-bordered table-unidades-tematicas">
-                                <thead class="thead-dark table-unidades-tematicas-thead">
-                                    <tr>
-                                        <th scope="col">Unidades Temáticas</th>
-                                        <th scope="col">Opções</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="table-unidades-tematicas-tbody">
-                                    <tr>
-                                        <th scope="row">
-                                            <h5>Unidade: MATÉRIA E ENERGIA</h5>
-                                            <table class="table bg-info table-und-tem-interna">
-                                                <thead class="bg-info">
-                                                    <tr>
-                                                        <th scope="col"></th>
-                                                        <th scope="col">OBJETOS DE CONHECIMENTO</th>
-                                                        <th scope="col">HABILIDADES</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="col"><i class="material-icons"
-                                                            onclick="alert('Linha excluida')">remove_circle_outline</i></th>
-                                                        <th scope="row">
-                                                            Podução de som<br>
-                                                            Efeitos da luz nos materiais
-                                                        </th>
-                                                        <th>
-                                                            (EF03CI01) Produzir diferentes sons a partir da vibração de
-                                                            variados objetos e identificar variáveis que influem nesse
-                                                            fenômeno.
-                                                        </th>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="col"><i class="material-icons"
-                                                            onclick="alert('Linha excluida')">remove_circle_outline</i></th>
-                                                        <th scope="row">
-                                                            Saúde auditiva e visual
-                                                        </th>
-                                                        <th>
-                                                            (EF03CI02) Experimentar e relatar o que ocorre com a
-                                                            passagem da luz através de objetos transparentes (copos,
-                                                            janelas de vidro, lentes, prismas, água etc.), no contato
-                                                            com superfícies polidas (espelhos) e na intersecção com
-                                                            objetos opacos (paredes, pratos, pessoas e outros objetos de
-                                                            uso cotidiano).
-                                                            <hr>
-                                                            (EF03CI03) Discutir hábitos necessários para a manutenção da
-                                                            saúde auditiva e visual considerando as condições do
-                                                            ambiente em termos de som e luz.
-                                                        </th>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </th>
-                                        <th>
-                                            <i class="material-icons" data-toggle="modal"
-                                                data-target=".bd-example-modal-lg">add_circle_outline</i>
-                                            <i class="material-icons"
-                                                onclick="alert('Unidade temática excluida')">remove_circle_outline</i>
-                                            <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                data-target=".bd-example-modal-lg">+Unidades</button>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                data-target=".bd-example-modal-lg">Remover</button> -->
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">
-                                            <h5>Unidade: VIDA E EVOLUÇÃO</h5>
-                                            <table class="table bg-info table-und-tem-interna">
-                                                <thead class="bg-info">
-                                                    <tr>
-                                                        <th scope="col"></th>
-                                                        <th scope="col">OBJETOS DE CONHECIMENTO</th>
-                                                        <th scope="col">HABILIDADES</th>                                                        
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="col"><i class="material-icons"
-                                                            onclick="alert('Linha excluida')">remove_circle_outline</i></th>
-                                                        <th scope="row">
-                                                            Características e desenvolvimento dos animais
-                                                        </th>
-                                                        <th>
-                                                            (EF03CI04) Identificar características sobre o modo de vida
-                                                            (o que comem, como se reproduzem, como se deslocam etc.) dos
-                                                            animais mais comuns no ambiente próximo.
-                                                        </th>
-                                                        
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="col"><i class="material-icons"
-                                                            onclick="alert('Linha excluida')">remove_circle_outline</i></th>
-                                                        <th scope="row">
-
-                                                        </th>
-                                                        <th>
-                                                            (EF03CI05) Descrever e comunicar as alterações que ocorrem
-                                                            desde o nascimento em animais de diferentes meios terrestres
-                                                            ou aquáticos, inclusive o homem.
-                                                            <hr>
-                                                            (EF03CI06) Comparar alguns animais e organizar grupos com
-                                                            base em características externas comuns (presença de penas,
-                                                            pelos, escamas, bico, garras, antenas, patas etc.).
-                                                        </th>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-
-                                        </th>
-                                        <th>
-                                            <i class="material-icons" data-toggle="modal"
-                                                data-target=".bd-example-modal-lg">add_circle_outline</i>
-                                            <i class="material-icons"
-                                                onclick="alert('Unidade temática excluida')">remove_circle_outline</i>
-                                            <!-- <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                data-target=".bd-example-modal-lg">+Unidades</button>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal"
-                                                data-target=".bd-example-modal-lg">Remover</button> -->
-                                        </th>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="form-group col-12">
-                        <label for="exampleFormControlTextarea1">Descrição da unidade temática</label>
-                        <input class="form-control" id="exampleFormControlTextarea1" rows="2"></input>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <button id="btn-excluir" type="button"
-                            class="btn btn-primary form-control form-control-md">Adicionar</button>
-                    </div>
-                </div>
-            </div>
-            <div id="menu3" class="tab-pane fade">
-                TESTE
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <!--TELA FINAL-->
-    
+  </div>
+  </div>
 
-    <!-- MODAL CRUD -->
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Adicionar linha a unidade temática</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
+  <!-- MODAL CRUD COMPETENCIAS ---------------------------------------------------------------------------------->
+  <div class="modal fade" id="modalCompetencias" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Adicione uma competência</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="form-group col-12">
+              <label for="exampleFormControlTextarea1">Descreva a intenção</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="btn-excluir" type="button" class="btn btn-primary form-control form-control-md">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CRUD CONTEUDOS ---------------------------------------------------------------------------------->
+  <div class="modal fade" id="modalConteudos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Adicione um conteúdo</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="form-group col-12">
+              <label for="exampleFormControlTextarea1">Descrição do conteudo</label>
+              <input class="form-control" id="exampleFormControlTextarea1" rows="2"></input>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="btn-excluir" type="button" class="btn btn-primary form-control form-control-md">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CRUD DESCRIÇÃO UNIDADE TEMÁTICA -------------------------------------------------------------->
+  <div class="modal fade" id="modalUnidadeTematica" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Adicione uma Unidade Temática</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="form-group col-12">
+              <label for="exampleFormControlTextarea1">Descrição da Unidade</label>
+              <input class="form-control" id="exampleFormControlTextarea1"></input>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="btn-excluir" type="button" class="btn btn-primary form-control form-control-md">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CRUD LINHAS DE UNIDADES TEMÁTICAS --------------------------------------------------------->
+  <div class="modal fade bd-example-modal-lg" id="modalLinhaUnidadeTematica" tabindex="-1" role="dialog"
+    aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Adicionar linha a unidade temática</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <div class="col-md-6 col-xs-12">
+                    <div class="card">
+                      <div class="card-header">
+                        OBJETOS DE CONHECIMENTO
+                      </div>
+                      <ul class="list-group list-group-flush div-list-scroll">
+                        <li class="list-group-item list-group-item-action">
+                          <div class="float-left">
+                            Teste 1
+                          </div>
+                          <div class="float-right">
+                            <i class="material-icons" onclick="alert('Linha excluida')">remove_circle_outline</i>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="card-body">
                         <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                    <div class="col-md-6 col-xs-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                OBJETOS DE CONHECIMENTO
-                                            </div>
-                                            <ul class="list-group list-group-flush div-list-scroll">
-                                                <li class="list-group-item list-group-item-action">Cras justo odio</li>
-                                                <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
-                                                <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
-                                                <li class="list-group-item list-group-item-action">Cras justo odio</li>
-                                                <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
-                                                <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
-                                            </ul>
-                                            <div class="card-body">                                                
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <label for="exampleFormControlTextarea1">Descrição
-                                                            conhecimento</label>
-                                                        <input class="form-control col-12"
-                                                            id="exampleFormControlTextarea1" rows="2"></input>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <button type="button"
-                                                            class="btn btn-secondary form-control form-control-md">Adicionar</button>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <button type="button"
-                                                            class="btn btn-secondary form-control form-control-md">Remover</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-xs-12">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                HABILIDADES
-                                            </div>
-                                            <ul class="list-group list-group-flush div-list-scroll">
-                                                <li class="list-group-item list-group-item-action">Cras justo odio</li>
-                                                <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
-                                                <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
-                                                <li class="list-group-item list-group-item-action">Cras justo odio</li>
-                                                <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
-                                                <li class="list-group-item list-group-item-action">Vestibulum at eros</li>
-                                            </ul>
-
-                                            <div class="card-body">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <label for="exampleFormControlTextarea1">Descrição
-                                                            habilidade</label>
-                                                        <input class="form-control col-12"
-                                                            id="exampleFormControlTextarea1" rows="2"></input>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <button type="button"
-                                                            class="btn btn-secondary form-control form-control-sm">Adicionar</button>
-                                                    </div>
-                                                    <div class="col-6">
-                                                        <button type="button"
-                                                            class="btn btn-secondary form-control form-control-sm">Remover</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row" style="margin-top: 10px;">
-                                    <div class="col">
-                                        <button type="button" class="btn btn-primary form-control form-control-sm">Salvar</button>
-                                    </div>
-                                </div>
-                            </div>
+                          <div class="col-12">
+                            <label for="exampleFormControlTextarea1">Descrição
+                              conhecimento</label>
+                            <input class="form-control col-12" id="exampleFormControlTextarea1" rows="2"></input>
+                          </div>
+                          <div class="col-12">
+                            <button type="button"
+                              class="btn btn-success form-control form-control-md">
+                              <i class="material-icons">add_circle_outline</i>
+                              Adicionar
+                            </button>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
+                  <div class="col-md-6 col-xs-12">
+                    <div class="card">
+                      <div class="card-header">
+                        HABILIDADES
+                      </div>
+                      <ul class="list-group list-group-flush div-list-scroll">
+                        <li class="list-group-item list-group-item-action">
+                          <div class="float-left">
+                            Teste 2
+                          </div>
+                          <div class="float-right">
+                            <i class="material-icons" onclick="alert('Linha excluida')">remove_circle_outline</i>
+                          </div>
+                        </li>                        
+                      </ul>
 
-
-
-
-
-
-
-
-
-
-
-
-                    <!-- <form id="form-principal">
-                        <div class="form-row">
-                            <div class="form-group col-xs-12 col-lg-12">
-                                <label for="exampleFormControlInput1 ">Nome do aluno</label>
-                                <input type="text" class="form-control form-control-lg hide-show" id="nomeAluno"
-                                    placeholder="Nome">
-                            </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col-12">
+                            <label for="exampleFormControlTextarea1">Descrição
+                              habilidade</label>
+                            <input class="form-control col-12" id="exampleFormControlTextarea1" rows="2"></input>
+                          </div>
+                          <div class="col-12">
+                            <button type="button"
+                              class="btn btn-success form-control form-control-sm"> <i class="material-icons">add_circle_outline</i>Adicionar</button>
+                          </div>
                         </div>
-
-                        <div class="form-row">
-                            <div class="form-group col-xs-12 col-lg-6">
-                                <label for="exampleFormControlSelect1">Turma</label>
-                                <select class="form-control form-control-lg hide-show" id="idTurma">
-                                    <option selected disabled>Selecione uma turma</option>
-                                    <option value="1">Turma - A</option>
-                                    <option>Turma - B</option>
-                                    <option>Turma - C</option>
-                                    <option>Turma - D</option>
-                                    <option>Turma - E</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group col-xs-12 col-lg-6">
-                                <label for="exampleFormControlSelect1">Status</label>
-                                <select class="form-control form-control-lg hide-show" id="idStatus">
-                                    <option selected disabled>Selecione o status</option>
-                                    <option value="1">Ativo</option>
-                                    <option>Transferido</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="form-row">
-                            <div class="col">
-                                <button type="button" class="btn btn-lg btn-primary mb-2"
-                                    onclick="alert('Registro salvo com sucesso!')">Salvar</button>
-
-                                <button id="btn-editar" type="button" class="btn btn-lg btn-primary mb-2"
-                                    onclick="
-                                $('#form-principal .hide-show').each(function(){
-                                    $(this).prop('disabled', false);
-                                });
-                                $('#btn-excluir').show();
-                                ">Editar</button>
-                                <button id="btn-excluir" type="button"
-                                    class="btn btn-lg btn-primary mb-2">Excluir</button>
-                            </div>
-                        </div>
-                    </form> -->
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                <div class="row" style="margin-top: 10px;">
+                  <div class="col">
+                    <button type="button" class="btn btn-primary form-control form-control-sm">Salvar</button>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
+  </div>
+
+
+
+
 </body>
 
 <script src="./js/planejamentoIntecoesEducativas.js"></script>
 <script>
-    $('#container-principal').hide();
+  $('#container-principal').hide();
 
-    $('#btn-selecionar').on('click', function () {
-        $('#container-selecao').hide();
-        $('#container-principal').show();
-    });
+  $('#btn-selecionar').on('click', function () {
+    $('#container-selecao').hide();
+    $('#container-principal').show();
+  });
 </script>
 
 </html>

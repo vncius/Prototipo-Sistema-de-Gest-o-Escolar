@@ -18,7 +18,7 @@ header {
 }
 
 body {
-    background-image: url("../img/background1.jpg");
+    background-image: url("../img/background3.jpg");
     background-repeat: no-repeat;
     background-size: unset;
 }
@@ -35,4 +35,32 @@ th, td {
 
 i {
     cursor:pointer;
+    vertical-align: middle;
+}
+
+.cursor-normal {
+    cursor: context-menu;
+}
+
+float-left {
+    float: left;
+}
+
+float-right {
+    float: right;
+}
+
+thead tr th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 0 1px 0 0 #ddd, 0 -5px 0 0 #fff;
+}
+
+
+.not-fixed th {
+    position: relative!important;
+    top: 0;
+    z-index: 0;
+    box-shadow: 0 0px 0 0 #ddd, 0 0px 0 0 #fff;
 }
