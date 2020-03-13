@@ -3,56 +3,56 @@ html, body, .container {
     height: 100%;
 }
 
-table thead tr th:last-child, table tbody tr td:last-child {
-    width: 120px;
+#container-nova-intencao table thead tr th:last-child, table tbody tr td:last-child {
+    width: 90px;
     text-align: center;
 }
 
-table thead tr th:first-child, table tbody tr th:first-child {
+#container-nova-intencao table thead tr th:first-child, table tbody tr th:first-child {
     margin: 10%;
-    text-align: center;
-    width: 110px;
+    width: 40px;
 }
 
-.tables-intencoes table thead tr th:last-child, table tbody tr td:last-child {
-    width: 70px;
-    text-align: center;
-}
-
-.tables-intencoes thead tr th:first-child, table tbody tr th:first-child {
-    text-align: left;
-    width: auto;
-}
-
-.button-registrar-frequencia {
+#container-nova-intencao  .button-registrar-frequencia {
     margin-left: auto;
 }
 
-.table {
-    background-color: white!important;
+#container-nova-intencao .table {
     table-layout: fixed;
 }
 
 @media only screen and (max-width: 600px) {
-    table thead tr th:last-child, table tbody tr td:last-child {
+    #container-nova-intencao table thead tr th:last-child, table tbody tr td:last-child {
         width: 70px!important;
         text-align: center;
     }
+    #container-nova-intencao .div-table-scroll {
+        height: 200px;
+    }
 }
 
-.modal .modal-dialog {
+@media only screen and (min-width: 601px) {
+    #container-nova-intencao .div-table-scroll {
+        height: 300px;
+    }
+}
+
+#container-nova-intencao .modal .modal-dialog {
     max-width: 80%;
 }
 
-.div-table-subcadastros {
+#container-nova-intencao .div-table-scroll {
     border-radius: 10px;
     /* border-color: darkgray ;
     border-style: groove; */
     max-width: 100%;
     overflow-y: scroll;
-    height: 250px;
+    /* background: rgba(0,0,0,.03)!important; */
+    background: white!important;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,.125);
 }
 
-.tables-intencoes tbody tr th {
+#container-nova-intencao .tables-intencoes tbody tr th {
     font-weight: normal;
 }

@@ -3,115 +3,108 @@ html, body, .container {
     height: 100%;
 }
 
-/* .table-competencias table thead tr th:last-child, table tbody tr td:last-child {
-    width: 70px;
-    text-align: center;
-}
-
-.table-competencias thead tr th:first-child, table tbody tr th:first-child {
-    text-align: left;
-    width: auto;
-} */
-
 tbody tr th {
     font-weight: normal!important;
 }
 
-.table {
-    text-align: left;
-    background-color: white!important;
+#container-planejamento .table {
+    text-align: left!important;
     table-layout: fixed;
 }
 
-.div-table-scroll {
+#container-planejamento .div-table-scroll {
     border-radius: 10px;
     /* border-color: darkgray ;
     border-style: groove; */
     max-width: 100%;
     overflow-y: scroll;
-    background: white;
+    background: white!important;
+    /* background: rgba(0,0,0,.03)!important; */
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,.125);
 }
 
-.table-competencias tbody tr th {
+#container-planejamento .table-competencias tbody tr th {
     font-weight: normal;
 }
 
 /*UNIDADES TEMATICAS*/
 
-#thead-unidades-tematicas tr th:last-child, #tbody-unidades-tematicas tr td:last-child {
+#container-planejamento #thead-unidades-tematicas tr th:last-child, #tbody-unidades-tematicas tr td:last-child {
     width: 70px;
 }
 
-#thead-unidades-tematicas tr th:last-child, #tbody-unidades-tematicas tr td:last-child {
+#container-planejamento #thead-unidades-tematicas tr th:last-child, #tbody-unidades-tematicas tr td:last-child {
     width: 35px;
 }
 
-#table-unidades-tematicas {
+#container-planejamento #table-unidades-tematicas {
     margin-bottom: 0;
 }
 
- .hide-sub {
+#container-planejamento .hide-sub {
      height: 0;
  }
 
-.col-option-unidade-tematica {
+ #container-planejamento .col-option-unidade-tematica {
     background-color: #e6e6e6;
 }
 
-.table-sub-unidades-tematicas tr th:first-child, #table-conteudos tr th:first-child, #table-competencias tr th:first-child {
+#container-planejamento .table-sub-unidades-tematicas tr th:first-child, #table-conteudos tr th:first-child, #table-competencias tr th:first-child {
     width: 35px;
 }
 
-.div-list-scroll {
+#container-planejamento .div-list-scroll {
     /* border-color: darkgray ;
     border-style: groove; */
     max-width: 100%;
     overflow-y: scroll;
     height: 150px;
+    background: white!important;
 }
 
-.list-conhecimentos, .list-habilidades {
+#container-planejamento .list-conhecimentos, .list-habilidades {
     height: 150px;
     background: #f2f2f2;
     width: 100%;
     margin: 0px 0px 0px 0px;
 }
 
-.modal-body .container-fluid .card-body .row .col-6 button {
+#container-planejamento .modal-body .container-fluid .card-body .row .col-6 button {
     margin-top: 10px;
 }
 
-hr {
+#container-planejamento hr {
     margin: 0;
 }
 
-#menu3 .row {
+#container-planejamento #menu3 .row {
     text-align: left;
     margin-bottom: 10px;
 }
 
-.card-body .col-12:first-child {
+#container-planejamento .card-body .col-12:first-child {
     margin-bottom: 10px;
 }
 
 /*MEDIDAS DE TELAS*/
 @media only screen and (max-width: 600px) {
-    table thead tr th:last-child, table tbody tr td:last-child {
+    #container-planejamento table thead tr th:last-child, table tbody tr td:last-child {
         width: 30px!important;
     }
-    .table-sub-unidades-tematicas tr th:first-child, #table-conteudos tr th:first-child, #table-competencias tr th:first-child {
+    #container-planejamento .table-sub-unidades-tematicas tr th:first-child, #table-conteudos tr th:first-child, #table-competencias tr th:first-child {
         width: 15px!important;
     }
-    .div-table-scroll {
+    #container-planejamento .div-table-scroll {
         height: 200px;
     }
 }
 
 @media only screen and (min-width: 601px) {
-    #modalLinhaUnidadeTematica .modal-dialog {
+    #container-planejamento #modalLinhaUnidadeTematica .modal-dialog {
         max-width: 80%;
     }    
-    .div-table-scroll {
+    #container-planejamento .div-table-scroll {
         height: 500px;
     }
 }

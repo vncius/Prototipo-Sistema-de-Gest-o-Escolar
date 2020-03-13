@@ -3,45 +3,180 @@
 
 <head>
   <link rel="stylesheet" href="/ModuloAdministrador/css/planejamentoIntencoesEducativas.css">
+  <link rel="stylesheet" href="/ModuloAdministrador/css/intecoesEducativas.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <title></title>
 </head>
 
 <body>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <!-- <div class="container-fluid" style="margin-bottom: 25px;">
-        <div class="row">
-            <div class="col">
-                <div class="row align-items-center">
-                    <div class="col">
-                        <h3>Planejamento de Intenções Educativas</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-  <div id="container-selecao" class="container-fluid">
-    <div class="row">
-      <div class="col-6">
-        <div>
-          <label for="exampleFormControlSelect1">Selecione uma intenção Educativa</label>
-          <select class="form-control hide-show" id="idIntencao">
-            <option selected disabled>Selecione</option>
-            <option value="1">CIÊNCIAS DA NATUREZA</option>
-          </select>
+  <!-- TELA DE NOVA INTENÇÃO EDUCATIVA -->
+  <div id="container-nova-intencao" class="container-fluid">
+    <div class="card">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <h3 class="col">Intenções Educativas Anual</h3>
         </div>
       </div>
-      <div class="col-4">
-        <div>
-          <label for="exampleFormControlTextarea1" style="opacity: 0%;">A</label>
-          <button id="btn-selecionar" type="button"
-            class="btn btn-primary form-control form-control-md">Selecionar</button>
+      <div class="card-body">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="exampleFormControlInput1">Pesquisa</label>
+            <input type="text" class="form-control form-control-md" id="exampleFormControlInput1"
+              placeholder="Descrição">
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="exampleFormControlSelect1">Tipo de pesquisa</label>
+            <select class="form-control form-control-md" id="exampleFormControlSelect1">
+              <option selected>Por descrição</option>
+              <option>Por série</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="teste" style="opacity: 0%;" class="hide-show-responsive">teste</label>
+            <button type="button" id="teste" class="btn btn-primary form-control form-control-md" alt="buscar">Buscar</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="div-table-scroll">
+              <table class="table table-sm table-striped table-bordered table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col" class="text-center">ID</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col" class="hide-show-responsive">Série</th>
+                    <th scope="col">Opções</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="text-center">1</th>
+                    <td>CIÊNCIAS DA NATUREZA</td>
+                    <td class="hide-show-responsive">1º Série</td>
+                    <td>
+                      <i class="material-icons" data-toggle="modal" alt="Visualizar" data-target=".bd-example-modal-lg" onclick="
+                        $('#btn-excluir').hide();
+                        $('#btn-editar').show(); 
+                        $('#form-principal .hide-show').each(function(){
+                          $(this).prop('disabled', true);
+                        });
+      
+                        $('#descricao').val('CIÊNCIAS DA NATUREZA');
+                        $('#idSerie').val('1');
+      
+                      "> visibility</i>
+                      <i class="material-icons" onclick="
+                        $('#container-nova-intencao').hide();
+                        $('#container-planejamento').show();
+                        ">
+                        post_add
+                      </i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
+              onclick="
+						$('#btn-editar, #btn-excluir').hide();
+						$('#form-principal .hide-show').each(function(){
+							$(this).prop('disabled', false);
+						});
+						$('form')[0].reset();
+						">Novo Registro</button>
+          </div>
+        </div>
+
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registro de Intenções Educativas Anual</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <div class="container-fluid">
+                  <form id="form-principal">
+                    <div class="form-row">
+                      <div class="form-group col-xs-12 col-lg-12">
+                        <label for="descricao">Descrição</label>
+                        <input type="text" class="form-control form-control-lg hide-show" id="descricao"
+                          placeholder="Descrição da Intenção Educativa">
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-xs-12 col-lg-12">
+                        <label for="exampleFormControlSelect1">Série</label>
+                        <select class="form-control form-control-lg hide-show" id="idSerie">
+                          <option selected disabled>Selecione uma série</option>
+                          <option value="1">1º Série</option>
+                          <option>2º Série</option>
+                          <option>3º Série</option>
+                          <option>4º Série</option>
+                          <option>5º Série</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="col">
+                        <button type="button" class="btn btn-lg btn-primary mb-2"
+                          onclick="alert('Registro salvo com sucesso!')">Salvar</button>
+
+                        <button id="btn-editar" type="button" class="btn btn-lg btn-primary mb-2" onclick="
+											 $('#form-principal .hide-show').each(function(){
+												 $(this).prop('disabled', false);
+											 });
+											 $('#btn-excluir').show();
+											 ">Editar</button>
+                        <button id="btn-excluir" type="button" class="btn btn-lg btn-primary mb-2">Excluir</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div id="container-principal" class="container-fluid">
-    <!-- Nav tabs -->
+
+  <!-- TELA DE PLANEJAMENTO DE INTENÇÕES -->
+  <div id="container-planejamento" class="container-fluid">
+    <div class="row" style="margin-bottom: 10px;">
+      <div class="col">
+        <div class="card">
+          <div class="card-header" style="height: 55px;">
+            <div style="float: left;">
+              <h4>Planejamento Ciências da Natureza - 1º Série</h4>
+            </div>
+            <div style="float: right;">
+              <button id="btn-voltar" type="button" class="btn btn-sm btn-primary mb-2" onclick="
+                $('#container-planejamento').hide();
+                $('#container-nova-intencao').show();
+              ">Voltar</button>
+            </div>     
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
     <div class="row">
       <div class="col">
         <div class="card text-center">
@@ -377,10 +512,10 @@
                 <div class="row">
                   <div class="col-12">
                     <div class="card">
-                      <div class="card-header">
-                        <h3>INTENÇÕES EDUCATIVAS PLANEJADAS PARA O ANO
+                      <div class="card-header text-center">
+                        <h5>INTENÇÕES EDUCATIVAS PLANEJADAS PARA O ANO
                           CIÊNCIAS DA NATUREZA
-                        </h3>
+                        </h5>
                       </div>
                     </div>
                   </div>
@@ -389,7 +524,7 @@
                   <div class="col-md-4 col-xs-12">
                     <div class="card">
                       <div class="card-header">
-                        Competências
+                        <h7>Competências</h7>
                       </div>
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">Quantidade : 4</li>
@@ -399,7 +534,7 @@
                   <div class="col-md-4 col-xs-12">
                     <div class="card">
                       <div class="card-header">
-                        Conteúdos
+                        <h7>Conteúdos</h7>
                       </div>
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">Quantidade : 7</li>
@@ -409,7 +544,7 @@
                   <div class="col-md-4 col-xs-12">
                     <div class="card">
                       <div class="card-header">
-                        Unidades Temáticas
+                        <h7>Unidades Temáticas</h7>
                       </div>
                       <ul class="list-group list-group-flush">
                         <li class="list-group-item">Quantidade : 2</li>
@@ -430,170 +565,168 @@
         </div>
       </div>
     </div>
-  </div>
-  </div>
-
-  <!-- MODAL CRUD COMPETENCIAS ---------------------------------------------------------------------------------->
-  <div class="modal fade" id="modalCompetencias" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Adicione uma competência</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="form-group col-12">
-              <label for="exampleFormControlTextarea1">Descreva a intenção</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-            </div>
+    <!-- MODAL CRUD COMPETENCIAS ---------------------------------------------------------------------------------->
+    <div class="modal fade" id="modalCompetencias" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Adicione uma competência</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
-        </div>
-        <div class="modal-footer">
-          <button id="btn-excluir" type="button" class="btn btn-primary form-control form-control-md">Salvar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL CRUD CONTEUDOS ---------------------------------------------------------------------------------->
-  <div class="modal fade" id="modalConteudos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Adicione um conteúdo</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="form-group col-12">
-              <label for="exampleFormControlTextarea1">Descrição do conteudo</label>
-              <input class="form-control" id="exampleFormControlTextarea1" rows="2"></input>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button id="btn-excluir" type="button" class="btn btn-primary form-control form-control-md">Salvar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL CRUD DESCRIÇÃO UNIDADE TEMÁTICA -------------------------------------------------------------->
-  <div class="modal fade" id="modalUnidadeTematica" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Adicione uma Unidade Temática</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="form-group col-12">
-              <label for="exampleFormControlTextarea1">Descrição da Unidade</label>
-              <input class="form-control" id="exampleFormControlTextarea1"></input>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button id="btn-excluir" type="button" class="btn btn-primary form-control form-control-md">Salvar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODAL CRUD LINHAS DE UNIDADES TEMÁTICAS --------------------------------------------------------->
-  <div class="modal fade bd-example-modal-lg" id="modalLinhaUnidadeTematica" tabindex="-1" role="dialog"
-    aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Adicionar linha a unidade temática</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="container-fluid">
+          <div class="modal-body">
             <div class="row">
-              <div class="col">
-                <div class="row">
-                  <div class="col-md-6 col-xs-12">
-                    <div class="card">
-                      <div class="card-header">
-                        OBJETOS DE CONHECIMENTO
-                      </div>
-                      <ul class="list-group list-group-flush div-list-scroll">
-                        <li class="list-group-item list-group-item-action">
-                          <div class="float-left">
-                            Teste 1
-                          </div>
-                          <div class="float-right">
-                            <i class="material-icons" onclick="alert('Linha excluida')">remove_circle_outline</i>
-                          </div>
-                        </li>
-                      </ul>
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-12">
-                            <label for="exampleFormControlTextarea1">Descrição
-                              conhecimento</label>
-                            <input class="form-control col-12" id="exampleFormControlTextarea1" rows="2"></input>
-                          </div>
-                          <div class="col-12">
-                            <button type="button" class="btn btn-success form-control form-control-md">
-                              <i class="material-icons">add_circle_outline</i>
-                              Adicionar
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-xs-12">
-                    <div class="card">
-                      <div class="card-header">
-                        HABILIDADES
-                      </div>
-                      <ul class="list-group list-group-flush div-list-scroll">
-                        <li class="list-group-item list-group-item-action">
-                          <div class="float-left">
-                            Teste 2
-                          </div>
-                          <div class="float-right">
-                            <i class="material-icons" onclick="alert('Linha excluida')">remove_circle_outline</i>
-                          </div>
-                        </li>
-                      </ul>
+              <div class="form-group col-12">
+                <label for="exampleFormControlTextarea1">Descreva a intenção</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="btn-excluir" type="button" class="btn btn-primary form-control form-control-md">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                      <div class="card-body">
-                        <div class="row">
-                          <div class="col-12">
-                            <label for="exampleFormControlTextarea1">Descrição
-                              habilidade</label>
-                            <input class="form-control col-12" id="exampleFormControlTextarea1" rows="2"></input>
+    <!-- MODAL CRUD CONTEUDOS ---------------------------------------------------------------------------------->
+    <div class="modal fade" id="modalConteudos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Adicione um conteúdo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="form-group col-12">
+                <label for="exampleFormControlTextarea1">Descrição do conteudo</label>
+                <input class="form-control" id="exampleFormControlTextarea1" rows="2"></input>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="btn-excluir" type="button" class="btn btn-primary form-control form-control-md">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL CRUD DESCRIÇÃO UNIDADE TEMÁTICA -------------------------------------------------------------->
+    <div class="modal fade" id="modalUnidadeTematica" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Adicione uma Unidade Temática</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="form-group col-12">
+                <label for="exampleFormControlTextarea1">Descrição da Unidade</label>
+                <input class="form-control" id="exampleFormControlTextarea1"></input>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button id="btn-excluir" type="button" class="btn btn-primary form-control form-control-md">Salvar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL CRUD LINHAS DE UNIDADES TEMÁTICAS --------------------------------------------------------->
+    <div class="modal fade bd-example-modal-lg" id="modalLinhaUnidadeTematica" tabindex="-1" role="dialog"
+      aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Adicionar linha a unidade temática</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                  <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                      <div class="card">
+                        <div class="card-header">
+                          OBJETOS DE CONHECIMENTO
+                        </div>
+                        <ul class="list-group list-group-flush div-list-scroll">
+                          <li class="list-group-item list-group-item-action">
+                            <div class="float-left">
+                              Teste 1
+                            </div>
+                            <div class="float-right">
+                              <i class="material-icons" onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-12">
+                              <label for="exampleFormControlTextarea1">Descrição
+                                conhecimento</label>
+                              <input class="form-control col-12" id="exampleFormControlTextarea1" rows="2"></input>
+                            </div>
+                            <div class="col-12">
+                              <button type="button" class="btn btn-success form-control form-control-md">
+                                <i class="material-icons">add_circle_outline</i>
+                                Adicionar
+                              </button>
+                            </div>
                           </div>
-                          <div class="col-12">
-                            <button type="button" class="btn btn-success form-control form-control-sm"> <i
-                                class="material-icons">add_circle_outline</i>Adicionar</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                      <div class="card">
+                        <div class="card-header">
+                          HABILIDADES
+                        </div>
+                        <ul class="list-group list-group-flush div-list-scroll">
+                          <li class="list-group-item list-group-item-action">
+                            <div class="float-left">
+                              Teste 2
+                            </div>
+                            <div class="float-right">
+                              <i class="material-icons" onclick="alert('Linha excluida')">remove_circle_outline</i>
+                            </div>
+                          </li>
+                        </ul>
+
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-12">
+                              <label for="exampleFormControlTextarea1">Descrição
+                                habilidade</label>
+                              <input class="form-control col-12" id="exampleFormControlTextarea1" rows="2"></input>
+                            </div>
+                            <div class="col-12">
+                              <button type="button" class="btn btn-success form-control form-control-sm"> <i
+                                  class="material-icons">add_circle_outline</i>Adicionar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="row" style="margin-top: 10px;">
-                  <div class="col">
-                    <button type="button" class="btn btn-primary form-control form-control-sm">Salvar</button>
+                  <div class="row" style="margin-top: 10px;">
+                    <div class="col">
+                      <button type="button" class="btn btn-primary form-control form-control-sm">Salvar</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -603,20 +736,22 @@
       </div>
     </div>
   </div>
-
-
-
-
 </body>
 
 <script src="./js/planejamentoIntecoesEducativas.js"></script>
 <script>
-  $('#container-principal').hide();
+  $('#container-planejamento').hide();
+  $('#container-nova-intencao').show();
 
-  $('#btn-selecionar').on('click', function () {
-    $('#container-selecao').hide();
-    $('#container-principal').show();
-  });
+  // $('#btn-selecionar').on('click', function () {
+  //   $('#container-nova-intencao').hide();
+  //   $('#container-planejamento').show();
+  // });
+
+  // $('#btn-nova-intencao').on('click', function () {
+  //   $('#container-planejamento').hide();
+  //   $('#container-nova-intencao').show();
+  // });
 </script>
 
 </html>
