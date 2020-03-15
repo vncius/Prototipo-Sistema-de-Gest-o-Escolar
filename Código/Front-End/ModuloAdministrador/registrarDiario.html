@@ -26,56 +26,65 @@
           <div class="form-group col-md-4">
             <label for="exampleFormControlSelect1">Tipo de pesquisa</label>
             <select class="form-control form-control-md" id="exampleFormControlSelect1">
-              <!-- <option selected>Por descrição</option> -->
+              <option selected>Por professor</option>
+              <option >Por ano letivo</option>
+              <option >Por escola</option>
+              <option >Por série</option>
+              <option >Por ensino</option>
             </select>
           </div>
 
           <div class="form-group col-md-2">
-            <label for="teste" style="opacity: 0%;" class="hide-show-responsive">teste</label>
+            <label for="teste" style="opacity: 0%;">teste</label>
             <button type="button" id="teste" class="btn btn-primary form-control form-control-md">Buscar</button>
           </div>
         </div>
 
         <div class="row">
           <div class="col">
-            <table class="table table-sm table-striped table-bordered table-hover">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Professor(a)</th>
-                  <th scope="col" class="hide-show-responsive">Ano letivo</th>
-                  <th scope="col" class="hide-show-responsive">Turma</th>
-                  <th scope="col" class="hide-show-responsive">Turno</th>
-                  <th scope="col">Opções</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Rodolfo Pereira do Santos</td>
-                  <td class="hide-show-responsive">2020</td>
-                  <td class="hide-show-responsive">Turma - A</td>
-                  <td class="hide-show-responsive">Vespertino</td>
-                  <td>
-                    <i class="material-icons" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
-                    $('#btn-excluir').hide();
-                                        $('#btn-editar').show(); 
-                                        $('#form-principal .hide-show').each(function(){
-                                            $(this).prop('disabled', true);
-                                        });
-    
-                                        $('#tipoEnsino').val('Ensino Fundamental');
-                                        $('#descricaoTurno').val('Vespertino');
-                                        $('#anoLetivo').val('2020');
-                                        $('#nomeProfessor').val('Rodolfo Pereira do Santos');
-                                        $('#idTurma').val('1');
-                                        $('#serie').val('1º Série');
-    
-                    "> visibility</i>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="div-table-scroll-padrao">
+              <table class="table table-sm table-striped table-bordered table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Professor(a)</th>
+                    <th scope="col" class="hide-show-responsive-diario">Ano letivo</th>
+                    <th scope="col" class="hide-show-responsive-diario">Turma</th>
+                    <th scope="col" class="hide-show-responsive-diario">Escola</th>
+                    <th scope="col" class="hide-show-responsive-diario">Série</th>
+                    <th scope="col" class="hide-show-responsive-diario">Ensino</th>
+                    <th scope="col">Opções</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Rodolfo Pereira do Santos</td>
+                    <td class="hide-show-responsive-diario">2020</td>
+                    <td class="hide-show-responsive-diario">Turma - A</td>
+                    <td class="hide-show-responsive-diario">Escola Municipal 1</td>
+                    <td class="hide-show-responsive-diario">1º Série</td>
+                    <td class="hide-show-responsive-diario">Ensino Fundamental</td>
+                    <td>
+                      <i class="material-icons" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
+                      $('#btn-excluir').hide();
+                                          $('#btn-editar').show(); 
+                                          $('#form-principal .hide-show').each(function(){
+                                              $(this).prop('disabled', true);
+                                          });
+                                          $('#idEscola').val('1');
+                                          $('#tipoEnsino').val('Ensino Fundamental'); 
+                                          $('#anoLetivo').val('2020');
+                                          $('#nomeProfessor').val('Rodolfo Pereira do Santos');
+                                          $('#idTurma').val('1');
+                                          $('#serie').val('1º Série');
+      
+                      "> visibility</i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>            
           </div>
         </div>
 
@@ -150,17 +159,12 @@
                     </div>
 
                     <div class="form-row">
-                      <div class="form-group col-4">
-                        <label for="descricaoTurno">Turno</label>
-                        <input readonly type="text" class="form-control form-control-lg hide-show" id="descricaoTurno"
-                          placeholder="Turno">
-                      </div>
-                      <div class="form-group col-4">
+                      <div class="form-group col-6">
                         <label for="anoLetivo">Ano Letivo</label>
-                        <input readonly type="text" class="form-control form-control-lg hide-show" id="anoLetivo"
+                        <input type="number" min="2020" max="2060" maxlength="4" minlength="4" class="form-control form-control-lg hide-show" id="anoLetivo"
                           placeholder="Ano Letivo">
                       </div>
-                      <div class="form-group col-4">
+                      <div class="form-group col-6">
                         <label for="serie">Série</label>
                         <input readonly type="text" class="form-control form-control-lg hide-show" id="serie"
                           placeholder="Série">
@@ -190,35 +194,30 @@
                       switch (idSelecionado) {
                         case '1':
                           $('#tipoEnsino').val('Ensino Fundamental');
-                          $('#descricaoTurno').val('Vespertino');
                           $('#anoLetivo').val('2020');
                           $('#nomeProfessor').val('Rodolfo Pereira do Santos');
                           $('#serie').val('2º Série');
                           break;
                         case '2':
                           $('#tipoEnsino').val('Ensino Fundamental');
-                          $('#descricaoTurno').val('Vespertino');
                           $('#anoLetivo').val('2020');
                           $('#nomeProfessor').val('Luiz Santos');
                           $('#serie').val('1º Série');
                           break;
                         case '3':
                           $('#tipoEnsino').val('Ensino Infantil');
-                          $('#descricaoTurno').val('Vespertino');
                           $('#anoLetivo').val('2020');
                           $('#nomeProfessor').val('Luiza Mota');
                           $('#serie').val('3º Série');
                           break;
                         case '4':
                           $('#tipoEnsino').val('Ensino Fundamental');
-                          $('#descricaoTurno').val('Noturno');
                           $('#anoLetivo').val('2020');
                           $('#nomeProfessor').val('Pedro Henrique');
                           $('#serie').val('4º Série');
                           break;
                         case '5':
                           $('#tipoEnsino').val('Ensino Infantil');
-                          $('#descricaoTurno').val('Vespertino');
                           $('#anoLetivo').val('2020');
                           $('#nomeProfessor').val('Leticia Fontinely');
                           $('#serie').val('5º Série');

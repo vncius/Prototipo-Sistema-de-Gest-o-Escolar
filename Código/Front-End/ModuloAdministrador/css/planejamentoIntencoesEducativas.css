@@ -54,15 +54,6 @@ tbody tr th {
     width: 35px;
 }
 
-#container-planejamento .div-list-scroll {
-    /* border-color: darkgray ;
-    border-style: groove; */
-    max-width: 100%;
-    overflow-y: scroll;
-    height: 150px;
-    background: white!important;
-}
-
 #container-planejamento .list-conhecimentos, .list-habilidades {
     height: 150px;
     background: #f2f2f2;
@@ -87,6 +78,10 @@ tbody tr th {
     margin-bottom: 10px;
 }
 
+#container-planejamento .table .table-sub-unidades-tematicas tbody tr {
+    background-color: cadetblue;
+}
+
 /*MEDIDAS DE TELAS*/
 @media only screen and (max-width: 600px) {
     #container-planejamento table thead tr th:last-child, table tbody tr td:last-child {
@@ -95,16 +90,10 @@ tbody tr th {
     #container-planejamento .table-sub-unidades-tematicas tr th:first-child, #table-conteudos tr th:first-child, #table-competencias tr th:first-child {
         width: 15px!important;
     }
-    #container-planejamento .div-table-scroll {
-        height: 200px;
-    }
 }
 
 @media only screen and (min-width: 601px) {
     #container-planejamento #modalLinhaUnidadeTematica .modal-dialog {
         max-width: 80%;
-    }    
-    #container-planejamento .div-table-scroll {
-        height: 500px;
     }
 }

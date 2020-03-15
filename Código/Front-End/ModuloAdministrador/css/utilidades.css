@@ -27,12 +27,6 @@ th, td {
     vertical-align: middle!important;
 }
 
-@media only screen and (max-width: 600px) {
-    .hide-show-responsive {
-        display: none;
-    }
-}
-
 i {
     cursor:pointer;
     vertical-align: middle;
@@ -63,4 +57,31 @@ thead tr th {
     top: 0;
     z-index: 0;
     box-shadow: 0 0px 0 0 #ddd, 0 0px 0 0 #fff;
+}
+
+.div-table-scroll-padrao {
+    border-radius: 10px;
+    /* border-color: darkgray ;
+    border-style: groove; */
+    max-width: 100%;
+    overflow-y: scroll;
+    /* background: rgba(0,0,0,.03)!important; */
+    background: white!important;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
+@media only screen and (max-width: 600px) {
+    .hide-show-responsive {
+        display: none;
+    }
+    .div-table-scroll-padrao {
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .div-table-scroll-padrao {
+        height: 350px;
+    }
 }

@@ -18,7 +18,7 @@ header {
 }
 
 body {
-    background-image: url("../img/background1.jpg");
+    background-image: url("../img/background3.jpg");
     background-repeat: no-repeat;
     background-size: unset;
 }
@@ -27,8 +27,57 @@ th, td {
     vertical-align: middle!important;
 }
 
+i {
+    cursor:pointer;
+    vertical-align: middle;
+}
+
+.cursor-normal {
+    cursor: context-menu;
+}
+
+float-left {
+    float: left;
+}
+
+float-right {
+    float: right;
+}
+
+.not-fixed th {
+    position: relative!important;
+    top: 0;
+    z-index: 0;
+    /* box-shadow: 0 0px 0 0 #ddd, 0 0px 0 0 #fff; */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.div-table-scroll-padrao {
+    border-radius: 10px;
+    /* border-color: darkgray ;
+    border-style: groove; */
+    max-width: 100%;
+    overflow-y: scroll;
+    /* background: rgba(0,0,0,.03)!important; */
+    background: white!important;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0,.125);
+}
+
 @media only screen and (max-width: 600px) {
     .hide-show-responsive {
         display: none;
+    }
+    .div-table-scroll-padrao {
+        height: 200px;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .div-table-scroll-padrao {
+        height: 350px;
     }
 }

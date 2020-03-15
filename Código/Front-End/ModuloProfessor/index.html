@@ -11,38 +11,50 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>SGE - Sistema de Gestão Escolar</title>
 </head>
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <h2 class="sigla">SGE</h2>
+    <h2 id="sigla">SGE</h2>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Atividades
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#" onclick="$('#container').load('registrarFrequencia.html');">Registro de
-              Frequência</a>
-            <a class="dropdown-item" href="#" onclick="$('#container').load('atividadesDesenvolvidas.html');">Registros
-              de Atividades desenvolvidas</a>
-            <a class="dropdown-item" href="#"
-              onclick="$('#container').load('./intencoesEducativas/intencoesEducativas.html');"> Visualizar Intenções
-              Educativas Anual</a>
-            <a class="dropdown-item" href="#" onclick="$('#container').load('registrarEscolas.html');">Registro do
-              desenvolvimento do educando</a>
-            <a class="dropdown-item" href="#" onclick="$('#container').load('registrarProfessores.html');">Registro
-              final da situação do aluno</a>
-          </div>
-        </li>
+      <div style="width: 100%;">
+        <ul class="navbar-nav">
+          <a class="nav-link" href="#" onclick="carregarElemento('container', 'registrarFrequencia.html');">Frequência</a>
+          <a class="nav-link" href="#" onclick="carregarElemento('container', 'atividadesDesenvolvidas.html');">Atividades
+            desenvolvidas</a>
+          <a class="nav-link" href="#" onclick="carregarElemento('container', 'desenvolvimentoDoEducando.html');">Desenvolvimento do
+            educando</a>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="material-icons">archive</i>
+              Relatórios
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#" onclick="carregarElemento('container', 'visualizacaoIntencoesEducativas.html');">
+                Visualizar Intenções
+                Educativas Anual</a>
+              <a class="dropdown-item" href="#" onclick="carregarElemento('container', 'progressaoDoAluno.html');">Visualizar
+                Progressão do
+                Aluno</a>
+            </div>
+          </li>
+      </div>
+      <div>
+        <a class="nav-link" href="./login.html" style="color: white; display: inline-flex;">
+          Sair
+          <i class="material-icons" style="margin-left: 5px;">
+            power_settings_new
+          </i>
+        </a>
+      </div>
       </ul>
     </div>
   </nav>
@@ -64,7 +76,7 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
-  <script src="js/registrarDiario.js"></script>
+    <script src="./js/utilidades.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@ html, body, .container {
 }
 
 table thead tr th:last-child, table tbody tr td:last-child {
-    width: 150px;
+    width: 120px;
     text-align: center;
 }
 
@@ -21,4 +21,11 @@ table thead tr th:first-child, table tbody tr th:first-child {
 .table {
     background-color: white!important;
     table-layout: fixed;
+}
+
+@media only screen and (max-width: 600px) {
+    table thead tr th:last-child, table tbody tr td:last-child {
+        width: 70px!important;
+        text-align: center;
+    }
 }

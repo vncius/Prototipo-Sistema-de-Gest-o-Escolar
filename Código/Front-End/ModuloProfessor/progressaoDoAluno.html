@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./css/progressaoDoAluno.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header">
+        <div class="row align-items-center">
+          <h3 class="col">Progressão do Aluno</h3>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="exampleFormControlInput1">Pesquisa</label>
+            <input type="text" class="form-control form-control-md" id="exampleFormControlInput1"
+              placeholder="Descrição">
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="exampleFormControlSelect1">Tipo de pesquisa</label>
+            <select class="form-control form-control-md" id="exampleFormControlSelect1">
+              <option selected>Por nome</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-2">
+            <label for="teste" style="opacity: 0%;" class="hide-show-responsive">teste</label>
+            <button type="button" id="teste" class="btn btn-primary form-control form-control-md">Buscar</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="div-table-scroll-padrao">
+              <table class="table table-sm table-striped table-bordered table-hover text-center">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col" rowspan="2"hide-responsive-progressao style="width: 40px;">ID</th>
+                    <th scope="col" rowspan="2"hide-responsive-progressao>Nome</th>
+                    <!-- <th scope="col" class="hide-show-responsive">Progressão</th> -->
+                    <th scope="col" colspan="4" rowspan="1" class="hide-responsive-progressao" style="width: 260px;">Progressão</th>
+                    <th scope="col" colspan="4" rowspan="1" class="hide-responsive-progressao" style="width: 260px;">Faltas</th>
+                    <th scope="col" rowspan="2" class="hide-responsive-progressao" style="width: 80px;">Total Faltas</th>
+                    <th scope="col" rowspan="2" class="hide-responsive-progressao" style="width: 110px;">Resultado Final</th>
+                    <th class="hide-responsive-progressao-option">Opções</th>
+                  </tr>
+                  <TR class="hide-responsive-progressao">
+                    <th scope="col"hide-responsive-progressao>1º BIM</th>
+                    <th scope="col"hide-responsive-progressao>2º BIM</th>
+                    <th scope="col"hide-responsive-progressao>3º BIM</th>
+                    <th scope="col"hide-responsive-progressao>4º BIM</th>
+                    <th scope="col"hide-responsive-progressao>1º BIM</th>
+                    <th scope="col"hide-responsive-progressao>2º BIM</th>
+                    <th scope="col"hide-responsive-progressao>3º BIM</th>
+                    <th scope="col"hide-responsive-progressao>4º BIM</th>
+                  </TR>
+                </thead>
+                <tbody>
+                  <tr>
+                    <!--ID-->
+                    <th scope="row">1</th>
+                    <!--NOME-->
+                    <td>Mark Silva Santos</td>
+                    <!--PROGRESSÃO-->
+                    <td class="hide-responsive-progressao">PPAP</td>
+                    <td class="hide-responsive-progressao">PPAP</td>
+                    <td class="hide-responsive-progressao">PPAP</td>
+                    <td class="hide-responsive-progressao">PPAP</td>
+                    <!--FALTAS-->
+                    <td class="hide-responsive-progressao">08</td>
+                    <td class="hide-responsive-progressao">12</td>
+                    <td class="hide-responsive-progressao">12</td>
+                    <td class="hide-responsive-progressao">12</td>
+                    <!--TOTAL FALTAS-->
+                    <td class="hide-responsive-progressao">60</td>
+                    <td class="hide-responsive-progressao">
+                      Aprovado
+                    </td>
+                    <td class="hide-responsive-progressao-option">
+                      <i class="material-icons" data-toggle="modal" data-target="#modal-detalhes-nota" onclick="  
+                      "> visibility</i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>            
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL CRUD DETALHES NOTAS -->
+      <div id="modal-detalhes-nota" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Registro de Aluno</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container-fluid">
+                <form id="form-principal">
+                  <div class="form-row">
+                    <div class="form-group col-xs-12 col-lg-12">
+                      <label for="exampleFormControlInput1 ">Nome do aluno</label>
+                      <input type="text" class="form-control form-control-lg hide-show" id="nomeAluno"
+                        placeholder="Nome">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-xs-12 col-lg-6">
+                      <label for="exampleFormControlSelect1">Turma</label>
+                      <select class="form-control form-control-lg hide-show" id="idTurma">
+                        <option selected disabled>Selecione uma turma</option>
+                        <option value="1">Turma - A</option>
+                        <option>Turma - B</option>
+                        <option>Turma - C</option>
+                        <option>Turma - D</option>
+                        <option>Turma - E</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group col-xs-12 col-lg-6">
+                      <label for="exampleFormControlSelect1">Status</label>
+                      <select class="form-control form-control-lg hide-show" id="idStatus">
+                        <option selected disabled>Selecione o status</option>
+                        <option value="1">Ativo</option>
+                        <option>Transferido</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="col">
+                      <button type="button" class="btn btn-lg btn-primary mb-2"
+                        onclick="alert('Registro salvo com sucesso!')">Salvar</button>
+
+                      <button id="btn-editar" type="button" class="btn btn-lg btn-primary mb-2" onclick="
+                                            $('#form-principal .hide-show').each(function(){
+                                                $(this).prop('disabled', false);
+                                            });
+                                            $('#btn-excluir').show();
+                                            ">Editar</button>
+                      <button id="btn-excluir" type="button" class="btn btn-lg btn-primary mb-2">Excluir</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

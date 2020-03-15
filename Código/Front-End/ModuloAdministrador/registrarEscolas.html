@@ -38,38 +38,39 @@
 
         <div class="row">
           <div class="col">
-            <table class="table table-sm table-striped table-bordered table-hover">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">ID</th>
-                  <th scope="col">Nome</th>
-                  <th scope="col" class="hide-show-responsive">CNPJ</th>
-                  <th scope="col">Opções</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Escola Municipal 1</td>
-                  <td class="hide-show-responsive">50.061.655/0001-48</td>
-                  <td>
-                    <i class="material-icons" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
-                      $('#btn-excluir').hide();
-                      $('#btn-excluir').hide();
-                      $('#btn-editar').show(); 
-                      $('#form-principal .hide-show').each(function(){
-                        $(this).prop('disabled', true);
-                      });
-    
-                      $('#enderecoEscola').val('Rua 1, QD.32, LT.44, Cocalinho-MT');
-                      $('#nomeEscola').val('Escola Municipal 1')
-    
-                    "> visibility</i>
-
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="div-table-scroll-padrao">
+              <table class="table table-sm table-striped table-bordered table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col" class="hide-show-responsive">CNPJ</th>
+                    <th scope="col">Opções</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Escola Municipal 1</td>
+                    <td class="hide-show-responsive">50.061.655/0001-48</td>
+                    <td>
+                      <i class="material-icons" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
+                        $('#btn-excluir').hide();
+                        $('#btn-excluir').hide();
+                        $('#btn-editar').show(); 
+                        $('#form-principal .hide-show').each(function(){
+                          $(this).prop('disabled', true);
+                        });
+      
+                        $('#enderecoEscola').val('Rua 1, QD.32, LT.44, Cocalinho-MT');
+                        $('#nomeEscola').val('Escola Municipal 1')
+      
+                      "> visibility</i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>            
           </div>
         </div>
 

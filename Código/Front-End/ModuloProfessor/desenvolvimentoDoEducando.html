@@ -2,9 +2,7 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="css/registrarProfessores.css">
-
-  <title>Registro Professores</title>
+  <link rel="stylesheet" href="./css/desenvolvimentoDoEducando.css">
 </head>
 
 <body>
@@ -12,7 +10,7 @@
     <div class="card">
       <div class="card-header">
         <div class="row align-items-center">
-          <h3 class="col">Registro de Professores(as)</h3>
+          <h3 class="col">Registro de Alunos(as)</h3>
         </div>
       </div>
       <div class="card-body">
@@ -27,7 +25,11 @@
             <label for="exampleFormControlSelect1">Tipo de pesquisa</label>
             <select class="form-control form-control-md" id="exampleFormControlSelect1">
               <option selected>Por nome</option>
-              <option>Por CNPJ</option>
+              <option>Por escola</option>
+              <option>Por turma</option>
+              <option>Por série</option>
+              <option>Por turno</option>
+              <option>Por ID</option>
             </select>
           </div>
 
@@ -45,32 +47,34 @@
                   <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Nome</th>
-                    <th scope="col" class="hide-show-responsive">CPF</th>
+                    <th scope="col" class="hide-show-responsive">Situação</th>
                     <th scope="col">Opções</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">1</th>
-                    <td>Rodolfo Pereira do Santos</td>
-                    <td class="hide-show-responsive">856.966.555-99</td>
+                    <td>Mark Silva Santos</td>
+                    <td class="hide-show-responsive">Ativo</td>
                     <td>
                       <i class="material-icons" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
-                        $('#btn-excluir').hide();
-                        $('#btn-editar').show(); 
-                        $('#form-principal .hide-show').each(function(){
-                          $(this).prop('disabled', true);
-                        });
-  
-                        $('#idTurma').val('1');
-                        $('#nomeProfessor').val('Rodolfo Pereira do Santos');
-                        $('#cpf').val('856.966.555-99');    
-                      "> visibility</i>
+                                      $('#btn-excluir').hide();
+                                      $('#btn-editar').show(); 
+                                      $('#form-principal .hide-show').each(function(){
+                                          $(this).prop('disabled', true);
+                                      });
+      
+                                      $('#nomeAluno').val('Mark Silva Santos');
+                                      $('#idTurma').val('1');
+                                      $('#idStatus').val('1');
+                                      ">
+                        visibility
+                      </i>
                     </td>
                   </tr>
                 </tbody>
               </table>
-            </div>
+            </div>            
           </div>
         </div>
 
@@ -78,12 +82,12 @@
           <div class="col">
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
               onclick="
-                $('#btn-editar, #btn-excluir').hide();
-                $('#form-principal .hide-show').each(function(){
-                    $(this).prop('disabled', false);
-                });
-                $('form')[0].reset();
-                ">Nova Escola</button>
+                    $('#btn-editar, #btn-excluir').hide();
+                    $('#form-principal .hide-show').each(function(){
+                        $(this).prop('disabled', false);
+                    });
+                    $('form')[0].reset();
+                    ">Novo aluno</button>
           </div>
         </div>
 
@@ -95,7 +99,7 @@
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Registro de Professores</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Registro de Aluno</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
@@ -105,26 +109,32 @@
                 <div class="container-fluid">
                   <form id="form-principal">
                     <div class="form-row">
-                      <div class="form-group col-xs-12 col-lg-4">
-                        <label for="nomeProfessor">Nome do Professor(a)</label>
-                        <input type="text" class="form-control form-control-lg hide-show" id="nomeProfessor"
-                          placeholder="Nome Professor">
+                      <div class="form-group col-xs-12 col-lg-12">
+                        <label for="exampleFormControlInput1 ">Nome do aluno</label>
+                        <input type="text" class="form-control form-control-lg hide-show" id="nomeAluno"
+                          placeholder="Nome">
                       </div>
+                    </div>
 
-                      <div class="form-group col-xs-12 col-lg-4">
-                        <label for="cpf">CPF</label>
-                        <input type="text" class="form-control form-control-lg hide-show" id="cpf" placeholder="CPF">
-                      </div>
-
-                      <div class="form-group col-xs-12 col-lg-4">
-                        <label for="idTurma">Turma</label>
+                    <div class="form-row">
+                      <div class="form-group col-xs-12 col-lg-6">
+                        <label for="exampleFormControlSelect1">Turma</label>
                         <select class="form-control form-control-lg hide-show" id="idTurma">
-                          <option selected disabled>Turma pela qual o professor(a) é responsável</option>
+                          <option selected disabled>Selecione uma turma</option>
                           <option value="1">Turma - A</option>
                           <option>Turma - B</option>
                           <option>Turma - C</option>
                           <option>Turma - D</option>
                           <option>Turma - E</option>
+                        </select>
+                      </div>
+
+                      <div class="form-group col-xs-12 col-lg-6">
+                        <label for="exampleFormControlSelect1">Status</label>
+                        <select class="form-control form-control-lg hide-show" id="idStatus">
+                          <option selected disabled>Selecione o status</option>
+                          <option value="1">Ativo</option>
+                          <option>Transferido</option>
                         </select>
                       </div>
                     </div>
@@ -135,11 +145,11 @@
                           onclick="alert('Registro salvo com sucesso!')">Salvar</button>
 
                         <button id="btn-editar" type="button" class="btn btn-lg btn-primary mb-2" onclick="
-                                        $('#form-principal .hide-show').each(function(){
-                                            $(this).prop('disabled', false);
-                                        });
-                                        $('#btn-excluir').show();
-                                        ">Editar</button>
+                                            $('#form-principal .hide-show').each(function(){
+                                                $(this).prop('disabled', false);
+                                            });
+                                            $('#btn-excluir').show();
+                                            ">Editar</button>
                         <button id="btn-excluir" type="button" class="btn btn-lg btn-primary mb-2">Excluir</button>
                       </div>
                     </div>

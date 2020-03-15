@@ -38,34 +38,36 @@
 
         <div class="row">
           <div class="col">
-            <table class="table table-sm table-striped table-bordered table-hover">
-              <thead class="thead-dark">
-                <tr>
-                  <th scope="col">Data</th>
-                  <th scope="col">Descrição</th>
-                  <th scope="col">Opções</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">05/03/2020</th>
-                  <td>Realizado atividades de ciências</td>
-                  <td>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
-                      onclick="
-                                        $('#btn-excluir').hide();
-                                        $('#btn-editar').show(); 
-                                        $('#form-principal .hide-show').each(function(){
-                                            $(this).prop('disabled', true);
-                                        });
-    
-                                        $('#data').val('2020-03-05');
-                                        $('#atividadesDesenvolvidas').val('Realizado atividades de ciências');
-                                        ">Ver</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="div-table-scroll-padrao">
+              <table class="table table-sm table-striped table-bordered table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Data</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Opções</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">05/03/2020</th>
+                    <td>Realizado atividades de ciências</td>
+                    <td>
+                      <button type="button" class="btn btn-primary" data-toggle="modal"
+                        data-target=".bd-example-modal-lg" onclick="
+                                          $('#btn-excluir').hide();
+                                          $('#btn-editar').show(); 
+                                          $('#form-principal .hide-show').each(function(){
+                                              $(this).prop('disabled', true);
+                                          });
+      
+                                          $('#data').val('2020-03-05');
+                                          $('#atividadesDesenvolvidas').val('Realizado atividades de ciências');
+                                          ">Ver</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
 

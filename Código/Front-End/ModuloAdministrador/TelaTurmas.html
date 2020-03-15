@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+  <title>Registro de Tipos de Ensinos</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div id="container-planejamento" class="container-fluid">
+      <div class="row" style="margin-bottom: 10px;">
+        <div class="col">
+          <div class="card">
+            <div class="card-header" style="height: 55px;">
+              <div style="float: left;">
+                <h4 id="title-tela">Registro de Turmas</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#home"
+                    onclick="$('#home').load('registrarTumas.html'); $('#title-tela').html('Registro de Turmas');">Turmas</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu1"
+                    onclick="$('#menu1').load('registrarTurnos.html'); $('#title-tela').html('Registro de Turnos');">Turnos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu2"
+                    onclick="$('#menu2').load('registrarSeries.html'); $('#title-tela').html('Registro de Séries');">Séries</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu3"
+                    onclick="$('#menu3').load('registrarTiposDeEnsinos.html'); $('#title-tela').html('Registro de Tipo de Ensinos');">Tipos
+                    Ensino</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <div class="tab-content">
+                <!-- FORM 1 - LISTA DE COMPETÊNCIAS ---------------------------------------------------------------->
+                <div id="home" class="tab-pane active">
+
+                </div>
+
+                <div id="menu1" class="tab-pane">
+
+                </div>
+
+                <div id="menu2" class="tab-pane">
+
+                </div>
+
+                <div id="menu3" class="tab-pane">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
