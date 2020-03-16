@@ -37,3 +37,29 @@ table thead tr th:first-child, table tbody tr th:first-child {
         display: none;
     }
 }
+
+/*TABELA*/
+
+.turmaTable, .anoLetivoTable, .escolaTable, .serieTable, .ensinoTable {
+    text-align: center;
+}
+
+.idTable {
+    width: 40px;
+}
+
+.anoLetivoTable {
+    width: 80px;
+}
+
+.turmaTable {
+    width: 110px;
+}
+
+.escolaTable {
+
+}
+
+.serieTable {
+    width: 80px;
+}

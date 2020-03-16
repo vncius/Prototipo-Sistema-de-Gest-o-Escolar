@@ -28,10 +28,6 @@ html, body, .container {
     }
 }
 
-#container-nova-intencao .modal .modal-dialog {
-    max-width: 80%;
-}
-
 #container-nova-intencao .tables-intencoes tbody tr th {
     font-weight: normal;
 }

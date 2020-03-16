@@ -46,25 +46,25 @@
               <table class="table table-sm table-striped table-bordered table-hover">
                 <thead class="thead-dark">
                   <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">Professor(a)</th>
-                    <th scope="col" class="hide-show-responsive-diario">Ano letivo</th>
-                    <th scope="col" class="hide-show-responsive-diario">Turma</th>
-                    <th scope="col" class="hide-show-responsive-diario">Escola</th>
-                    <th scope="col" class="hide-show-responsive-diario">Série</th>
-                    <th scope="col" class="hide-show-responsive-diario">Ensino</th>
+                    <th scope="col" class="idTable">ID</th>
+                    <th scope="col" class="professorTable">Professor(a)</th>
+                    <th scope="col" class="anoLetivoTable hide-show-responsive-diario">Ano letivo</th>
+                    <th scope="col" class="turmaTable hide-show-responsive-diario">Turma</th>
+                    <th scope="col" class="escolaTable hide-show-responsive-diario">Escola</th>
+                    <th scope="col" class="serieTable hide-show-responsive-diario">Série</th>
+                    <th scope="col" class="ensinoTable hide-show-responsive-diario">Ensino</th>
                     <th scope="col">Opções</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Rodolfo Pereira do Santos</td>
-                    <td class="hide-show-responsive-diario">2020</td>
-                    <td class="hide-show-responsive-diario">Turma - A</td>
-                    <td class="hide-show-responsive-diario">Escola Municipal 1</td>
-                    <td class="hide-show-responsive-diario">1º Série</td>
-                    <td class="hide-show-responsive-diario">Ensino Fundamental</td>
+                    <th scope="row" class="idTable">1</th>
+                    <td class="professorTable">Rodolfo Pereira do Santos</td>
+                    <td class="hide-show-responsive-diario anoLetivoTable">2020</td>
+                    <td class="hide-show-responsive-diario turmaTable">Turma - A</td>
+                    <td class="hide-show-responsive-diario escolaTable">Escola Municipal 1</td>
+                    <td class="hide-show-responsive-diario serieTable">1º Série</td>
+                    <td class="hide-show-responsive-diario ensinoTable">Ensino Fundamental</td>
                     <td>
                       <i class="material-icons" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
                       $('#btn-excluir').hide();
@@ -75,9 +75,9 @@
                                           $('#idEscola').val('1');
                                           $('#tipoEnsino').val('Ensino Fundamental'); 
                                           $('#anoLetivo').val('2020');
-                                          $('#nomeProfessor').val('Rodolfo Pereira do Santos');
+                                          $('#idProfessor').val('1');
                                           $('#idTurma').val('1');
-                                          $('#serie').val('1º Série');
+                                          $('#serie').val('1º Série');                                        
       
                       "> visibility</i>
                     </td>
@@ -90,7 +90,7 @@
 
         <div class="row">
           <div class="col">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
+            <button type="button" class="btn btn-md btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
               onclick="
                     $('#btn-editar, #btn-excluir').hide();
                     $('#form-principal .hide-show').each(function(){
@@ -127,12 +127,16 @@
                         <select class="form-control form-control-lg hide-show" id="idEscola">
                           <option selected disabled>Selecione uma escola</option>
                           <option value="1">Escola Municipal 1</option>
+                          <option>Escola Municipal 2</option>
+                          <option>Escola Municipal 3</option>
+                          <option>Escola Municipal 4</option>
+                          <option>Escola Municipal 5</option>
                         </select>
                       </div>
-                      <div class="form-group col-xs-12 col-lg-6">
+                      <div class="form-group col-xs-12 col-lg-3">
                         <label for="idTurma">Turma</label>
                         <select class="form-control form-control-lg hide-show" id="idTurma">
-                          <option selected disabled>Selecione uma escola</option>
+                          <option selected disabled>Selecione uma turma</option>
                           <option value="1">Turma - A</option>
                           <option value="2">Turma - B</option>
                           <option value="3">Turma - C</option>
@@ -140,29 +144,28 @@
                           <option value="5">Turma - E</option>
                         </select>
                       </div>
-                    </div>
-
-                    <div class="form-row">
-                      <div class="form-group col">
-                        <label for="nomeProfessor">Professor</label>
-                        <input readonly type="text" class="form-control form-control-lg hide-show" id="nomeProfessor"
-                          placeholder="Professor">
+                      <div class="form-group col-3">
+                        <label for="anoLetivo">Ano Letivo</label>
+                        <input type="number" min="2020" max="2060" maxlength="4" minlength="4" class="form-control form-control-lg hide-show" id="anoLetivo"
+                          placeholder="Ano Letivo">
                       </div>
                     </div>
 
-                    <div class="form-row">
-                      <div class="form-group col">
-                        <label for="tipoEnsino">Tipo de Ensino</label>
-                        <input readonly type="text" class="form-control form-control-lg hide-show" id="tipoEnsino"
-                          placeholder="Tipo de ensino">
+                    <div class="form-row">                      
+                      <div class="form-group col-xs-12 col-lg-12">
+                        <label for="idProfessor">Professor</label>
+                        <select class="form-control form-control-lg hide-show" id="idProfessor">
+                          <option selected>Selecione um professor</option>
+                          <option value="1">Rodolfo Pereira do Santos</option>
+                        </select>
                       </div>
                     </div>
 
                     <div class="form-row">
                       <div class="form-group col-6">
-                        <label for="anoLetivo">Ano Letivo</label>
-                        <input type="number" min="2020" max="2060" maxlength="4" minlength="4" class="form-control form-control-lg hide-show" id="anoLetivo"
-                          placeholder="Ano Letivo">
+                        <label for="tipoEnsino">Tipo de Ensino</label>
+                        <input readonly type="text" class="form-control form-control-lg hide-show" id="tipoEnsino"
+                          placeholder="Tipo de ensino">
                       </div>
                       <div class="form-group col-6">
                         <label for="serie">Série</label>
@@ -171,19 +174,18 @@
                       </div>
                     </div>
 
-
                     <div class="form-row">
                       <div class="col">
-                        <button type="button" class="btn btn-lg btn-primary mb-2"
+                        <button type="button" class="btn btn-md btn-primary mb-2"
                           onclick="alert('Registro salvo com sucesso!')">Salvar</button>
 
-                        <button id="btn-editar" type="button" class="btn btn-lg btn-primary mb-2" onclick="
+                        <button id="btn-editar" type="button" class="btn btn-md btn-primary mb-2" onclick="
                                             $('#form-principal .hide-show').each(function(){
                                                 $(this).prop('disabled', false);
                                             });
                                             $('#btn-excluir').show();
                                             ">Editar</button>
-                        <button id="btn-excluir" type="button" class="btn btn-lg btn-primary mb-2">Excluir</button>
+                        <button id="btn-excluir" type="button" class="btn btn-md btn-primary mb-2">Excluir</button>
                       </div>
                     </div>
                   </form>

@@ -53,6 +53,10 @@ tbody tr th {
     margin: 0;
 }
 
+#container-planejamento .table .table-sub-unidades-tematicas tbody tr {
+    background-color: cadetblue;
+}
+
 #container-planejamento #menu3 .row {
     text-align: left;
     margin-bottom: 10px;

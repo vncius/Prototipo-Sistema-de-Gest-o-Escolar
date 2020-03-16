@@ -22,6 +22,7 @@
 </header>
 
 <body>
+	<style>body, header {display: none;}</style>
 	<div class="container centralizar-div">
 		<div class="div-login">
 			<div class="card bg-dark">
@@ -81,7 +82,6 @@
 			  </div>
 		</div>
 	</div>
-
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -93,5 +93,9 @@
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
 </body>
+
+<script>
+	$('header, body').fadeIn("slow");
+</script>  
 
 </html>

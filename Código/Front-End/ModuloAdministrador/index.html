@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" href="./img/icon_usuario.png">
   <link rel="stylesheet" href="css/utilidades.css">
-  <link rel="stylesheet" href="css/index.css">  
+  <link rel="stylesheet" href="css/index.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -16,6 +16,11 @@
   <title>SGE - Sistema de Gestão Escolar</title>
 </head>
 <header>
+  <style>
+    header {
+      display: none;
+    }
+  </style>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fadeIn">
     <h2 id="sigla">SGE</h2>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -44,12 +49,16 @@
               Cadastros
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#" onclick="carregarElemento('container','registrarAluno.html');">Alunos</a>
-              <a class="dropdown-item" href="#" onclick="carregarElemento('container','registrarProfessores.html');">Professores</a>
+              <a class="dropdown-item" href="#"
+                onclick="carregarElemento('container','registrarAluno.html');">Alunos</a>
+              <a class="dropdown-item" href="#"
+                onclick="carregarElemento('container','registrarProfessores.html');">Professores</a>
               <hr>
-              <a class="dropdown-item" href="#" onclick="carregarElemento('container','registrarDiario.html');">Diário</a>
-              <a class="dropdown-item" href="#" onclick="carregarElemento('container','TelaTurmas.html');">Turmas</a>              
-              <a class="dropdown-item" href="#" onclick="carregarElemento('container','registrarEscolas.html');">Escolas</a>              
+              <a class="dropdown-item" href="#"
+                onclick="carregarElemento('container','registrarDiario.html');">Diário</a>
+              <a class="dropdown-item" href="#" onclick="carregarElemento('container','TelaTurmas.html');">Turmas</a>
+              <a class="dropdown-item" href="#"
+                onclick="carregarElemento('container','registrarEscolas.html');">Escolas</a>
             </div>
           </li>
 
@@ -80,7 +89,7 @@
 
 <body>
   <div id="container" class="container">
-    
+
   </div>
 
   <!-- Optional JavaScript -->
@@ -94,9 +103,11 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
-    <script src="./js/utilidades.js"></script>
+  <script src="./js/utilidades.js"></script>
 </body>
 
-</html>
+<script>
+  $('header').fadeIn("slow");
+</script>
 
 </html>

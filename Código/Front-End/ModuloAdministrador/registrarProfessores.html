@@ -27,7 +27,8 @@
             <label for="exampleFormControlSelect1">Tipo de pesquisa</label>
             <select class="form-control form-control-md" id="exampleFormControlSelect1">
               <option selected>Por nome</option>
-              <option>Por CNPJ</option>
+              <option>Por CPF</option>
+              <option>Por status</option>
             </select>
           </div>
 
@@ -46,6 +47,8 @@
                     <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col" class="hide-show-responsive">CPF</th>
+                    <th scope="col" class="hide-show-responsive">Escola</th>
+                    <th scope="col" class="hide-show-responsive">Status</th>
                     <th scope="col">Opções</th>
                   </tr>
                 </thead>
@@ -54,6 +57,8 @@
                     <th scope="row">1</th>
                     <td>Rodolfo Pereira do Santos</td>
                     <td class="hide-show-responsive">856.966.555-99</td>
+                    <td class="hide-show-responsive">Escola Municipal 1</td>
+                    <td class="hide-show-responsive">Status</td>
                     <td>
                       <i class="material-icons" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="
                         $('#btn-excluir').hide();
@@ -64,7 +69,9 @@
   
                         $('#idTurma').val('1');
                         $('#nomeProfessor').val('Rodolfo Pereira do Santos');
-                        $('#cpf').val('856.966.555-99');    
+                        $('#cpf').val('856.966.555-99');  
+                        $('#idStatus').val('1');
+                        $('#idEscola').val('1');
                       "> visibility</i>
                     </td>
                   </tr>
@@ -76,7 +83,7 @@
 
         <div class="row">
           <div class="col">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
+            <button type="button" class="btn btn-md btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
               onclick="
                 $('#btn-editar, #btn-excluir').hide();
                 $('#form-principal .hide-show').each(function(){
@@ -86,8 +93,6 @@
                 ">Nova Escola</button>
           </div>
         </div>
-
-
 
         <!-- MODAL CRUD -->
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
@@ -105,12 +110,13 @@
                 <div class="container-fluid">
                   <form id="form-principal">
                     <div class="form-row">
-                      <div class="form-group col-xs-12 col-lg-4">
+                      <div class="form-group col-xs-12 col-lg-12">
                         <label for="nomeProfessor">Nome do Professor(a)</label>
                         <input type="text" class="form-control form-control-lg hide-show" id="nomeProfessor"
                           placeholder="Nome Professor">
                       </div>
-
+                    </div>
+                    <div class="form-row">                   
                       <div class="form-group col-xs-12 col-lg-4">
                         <label for="cpf">CPF</label>
                         <input type="text" class="form-control form-control-lg hide-show" id="cpf" placeholder="CPF">
@@ -127,20 +133,43 @@
                           <option>Turma - E</option>
                         </select>
                       </div>
+
+                      <div class="form-group col-xs-12 col-lg-4">
+                        <label for="idStatus">Status</label>
+                        <select class="form-control form-control-lg hide-show" id="idStatus">
+                          <option selected disabled>Selecione o status</option>
+                          <option value="1">Ativo</option>
+                          <option>Transferido</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-row">
+                      <div class="form-group col-xs-12 col-lg-12">
+                        <label for="exampleFormControlSelect1">Escola</label>
+                        <select class="form-control form-control-lg hide-show" id="idEscola">
+                          <option selected disabled>Selecione uma escola</option>
+                          <option value="1">Escola Municipal 1</option>
+                          <option>Escola Municipal 2</option>
+                          <option>Escola Municipal 3</option>
+                          <option>Escola Municipal 4</option>
+                          <option>Escola Municipal 5</option>
+                        </select>
+                      </div>
                     </div>
 
                     <div class="form-row">
                       <div class="col">
-                        <button type="button" class="btn btn-lg btn-primary mb-2"
+                        <button type="button" class="btn btn-md btn-primary mb-2"
                           onclick="alert('Registro salvo com sucesso!')">Salvar</button>
 
-                        <button id="btn-editar" type="button" class="btn btn-lg btn-primary mb-2" onclick="
+                        <button id="btn-editar" type="button" class="btn btn-md btn-primary mb-2" onclick="
                                         $('#form-principal .hide-show').each(function(){
                                             $(this).prop('disabled', false);
                                         });
                                         $('#btn-excluir').show();
                                         ">Editar</button>
-                        <button id="btn-excluir" type="button" class="btn btn-lg btn-primary mb-2">Excluir</button>
+                        <button id="btn-excluir" type="button" class="btn btn-md btn-primary mb-2">Excluir</button>
                       </div>
                     </div>
                   </form>

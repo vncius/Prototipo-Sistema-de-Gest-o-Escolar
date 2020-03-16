@@ -10,10 +10,10 @@
     <div class="card">
       <div class="card-header">
         <div class="row align-items-center">
-          <h3 class="col">Registro de Alunos(as)</h3>
+          <h3 class="col">Desenvolvimento do Educando</h3>
         </div>
       </div>
-      <div class="card-body">
+      <div class="card-body" style="display: none;">
         <div class="row">
           <div class="form-group col-md-6">
             <label for="exampleFormControlInput1">Pesquisa</label>
@@ -80,7 +80,7 @@
 
         <div class="row">
           <div class="col">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
+            <button type="button" class="btn btn-md btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
               onclick="
                     $('#btn-editar, #btn-excluir').hide();
                     $('#form-principal .hide-show').each(function(){
@@ -141,16 +141,16 @@
 
                     <div class="form-row">
                       <div class="col">
-                        <button type="button" class="btn btn-lg btn-primary mb-2"
+                        <button type="button" class="btn btn-md btn-primary mb-2"
                           onclick="alert('Registro salvo com sucesso!')">Salvar</button>
 
-                        <button id="btn-editar" type="button" class="btn btn-lg btn-primary mb-2" onclick="
+                        <button id="btn-editar" type="button" class="btn btn-md btn-primary mb-2" onclick="
                                             $('#form-principal .hide-show').each(function(){
                                                 $(this).prop('disabled', false);
                                             });
                                             $('#btn-excluir').show();
                                             ">Editar</button>
-                        <button id="btn-excluir" type="button" class="btn btn-lg btn-primary mb-2">Excluir</button>
+                        <button id="btn-excluir" type="button" class="btn btn-md btn-primary mb-2">Excluir</button>
                       </div>
                     </div>
                   </form>

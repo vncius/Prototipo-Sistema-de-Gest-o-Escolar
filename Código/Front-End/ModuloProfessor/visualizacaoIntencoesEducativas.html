@@ -29,6 +29,7 @@
           <div class="form-group col-md-4">
             <label for="exampleFormControlSelect1">Tipo de pesquisa</label>
             <select class="form-control form-control-md" id="exampleFormControlSelect1">
+              <option>Por data vigência</option>
               <option selected>Por descrição</option>
               <option>Por série</option>
             </select>
@@ -48,6 +49,7 @@
                   <tr>
                     <th scope="col" class="text-center">ID</th>
                     <th scope="col">Descrição</th>
+                    <th scope="col" class="hide-show-responsive">Ano Vigência</th>
                     <th scope="col" class="hide-show-responsive">Série</th>
                     <th scope="col">Opções</th>
                   </tr>
@@ -56,13 +58,15 @@
                   <tr>
                     <th scope="row" class="text-center">1</th>
                     <td>CIÊNCIAS DA NATUREZA</td>
+                    <td class="hide-show-responsive">2020</td>
                     <td class="hide-show-responsive">1º Série</td>
                     <td>
                       <i class="material-icons" data-toggle="modal" alt="Visualizar" data-target=".bd-example-modal-lg" onclick="
                         $('#form-principal .hide-show').each(function(){
                           $(this).prop('disabled', true);
                         });
-      
+                        
+                        $('#dtVigencia').val('2020');
                         $('#descricao').val('CIÊNCIAS DA NATUREZA');
                         $('#idSerie').val('1');
       
@@ -101,7 +105,7 @@
                       </div>
                     </div>
                     <div class="form-row">
-                      <div class="form-group col-xs-12 col-lg-12">
+                      <div class="form-group col-xs-12 col-lg-6">
                         <label for="exampleFormControlSelect1">Série</label>
                         <select class="form-control form-control-lg hide-show" id="idSerie">
                           <option selected disabled>Selecione uma série</option>
@@ -111,6 +115,11 @@
                           <option>4º Série</option>
                           <option>5º Série</option>
                         </select>
+                      </div>
+                      <div class="form-group col-xs-12 col-lg-6">
+                        <label for="dtVigencia">Data de vigência</label>
+                        <input type="number" min="2020" max="2060" maxlength="4" minlength="4" class="form-control form-control-lg hide-show" 
+                        id="dtVigencia" placeholder="Descrição da Intenção Educativa">
                       </div>
                     </div>
                   </form>
